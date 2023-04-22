@@ -39,3 +39,23 @@ class MenuTextField: UITextField {
         }
     }
 }
+
+// MARK: Changed font for elements in faculty list
+extension UIAlertController {
+    open override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+
+        for i in self.actions {
+            guard let title = i.title else { return }
+            var attributedText = NSMutableAttributedString(string: title)
+            if GlobalConstants.facultyList.contains(title) {
+                attributedText = NSMutableAttributedString(string: title, attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 18)])
+            }
+            let range = NSRange(location: 0, length: attributedText.length)
+            attributedText.addAttribute(.foregroundColor, value: UIColor(named: "alertColor"), range: range)
+            guard let label = (i.value(forKey: "__representer") as AnyObject).value(forKey: "label") as? UILabel else { return }
+            label.numberOfLines = 0
+            label.attributedText = attributedText
+        }
+    }
+}

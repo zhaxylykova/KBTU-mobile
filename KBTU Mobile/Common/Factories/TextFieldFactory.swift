@@ -10,13 +10,12 @@ import UIKit
 public class TextFieldFactory {
     private var textField = UITextField()
     
-    func makeDefaultTextField(withTitle title: String, domainText: String = "") -> UITextField {
+    func makeDefaultTextField(withTitle title: String) -> UITextField {
         textField.attributedPlaceholder = setAttributedText(with: title)
         setDefaultSettings()
         textField.setLeftPaddingPoints(10)
         setSecurity()
         setKeyboardType()
-        setDomain(with: domainText)
         setConstraints()
         return textField
     }
@@ -61,18 +60,6 @@ public class TextFieldFactory {
             keyboardType = .phonePad
         }
         textField.keyboardType = keyboardType
-    }
-    
-    private func setDomain(with text: String) {
-        if !text.isEmpty {
-            let domainLabel = UILabel()
-            domainLabel.text = "\(text)  "
-            domainLabel.font = UIFont(name: "Poppins-Regular", size: 16)
-            domainLabel.textColor = .lightGray
-            domainLabel.sizeToFit()
-            textField.rightView = domainLabel
-            textField.rightViewMode = .always
-        }
     }
     
     private func setSecurity() {

@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import PDFKit
 
 //struct Document: Identifiable {
 //    let id = UUID()
@@ -43,6 +44,8 @@ struct Document: Identifiable {
 }
 
 struct DocumentsView: View {
+    @ObservedObject var viewModel = DocumentsViewModel(firebaseStorage: FirebaseStorageService())
+    
     let documents: [Document] = [
         Document(name: "Working curriculum", children: [
             Document(name: "2022-2023",children: [
@@ -159,6 +162,11 @@ struct DocumentsView: View {
                     Text(document.name)
                 }
             }
+            if viewModel.pdfDocument != nil {
+                NavigationLink(destination: PDFViewer(pdfDocument: viewModel.pdfDocument ?? PDFDocument())) {
+                    Text("Example PDF")
+                }
+            }
         }
         .navigationTitle("Documents")
         .background(Color("backgroundColor"))
@@ -176,5 +184,29 @@ struct DocumentsView: View {
 struct DocumentsView_Previews: PreviewProvider {
     static var previews: some View {
         DocumentsView()
+    }
+}
+
+struct PDFViewer: View {
+    var pdfDocument: PDFDocument
+    
+    var body: some View {
+        PDFKitView(pdfDocument: pdfDocument)
+            .navigationBarTitle(Text("PDF Viewer"), displayMode: .inline)
+    }
+}
+
+struct PDFKitView: UIViewRepresentable {
+    var pdfDocument: PDFDocument
+    
+    func makeUIView(context: Context) -> PDFView {
+        let pdfView = PDFView()
+        pdfView.document = pdfDocument
+        pdfView.autoScales = true
+        return pdfView
+    }
+    
+    func updateUIView(_ uiView: PDFView, context: Context) {
+        uiView.document = pdfDocument
     }
 }

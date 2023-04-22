@@ -14,12 +14,11 @@ protocol FirebaseStorageServiceProtocol {
 
 
 final class FirebaseStorageService: FirebaseStorageServiceProtocol {
-    
     func fetch(path: String, completion: @escaping (Result<PDFDocument, Error>) -> ()) {
         let storageRef = Storage.storage().reference(withPath: path)
         storageRef.downloadURL { url, error in
-            guard error == nil else {
-//                completion(error)
+            if let error {
+                completion(.failure(error))
                 return
             }
             guard let url else {
@@ -27,13 +26,13 @@ final class FirebaseStorageService: FirebaseStorageServiceProtocol {
                 completion(.failure(error))
                 return
             }
-            
+
             let task = URLSession.shared.downloadTask(with: url) { (localURL, _, error) in
-                guard error == nil else {
-//                    completion(.failure(error))
+                if let error {
+                    completion(.failure(error))
                     return
                 }
-                
+
                 if let localURL = localURL {
                     if let pdfDocument = PDFDocument(url: localURL) {
                         completion(.success(pdfDocument))

@@ -1,0 +1,16 @@
+# Xcode
+.DS_Store
+*/.DS_Store
+*.xcuserstate
+*/build/*
+*/xcuserdata/*
+*/xcshareddata/*
+*/project.xcworkspace/xcuserdata/*
+
+# CocoaPods
+Pods/
+Podfile.lock
+xcworkspace/
+
+# Derived data
+DerivedData/

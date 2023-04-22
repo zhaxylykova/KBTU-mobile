@@ -1,0 +1,27 @@
+/* 
+  Localizable.strings
+  KBTU Mobile
+
+  Created by Altynay on 11.03.2023.
+  
+*/
+
+// MARK: - GetStarted Screen
+"Welcome to KBTU Mobile" = "KBTU Mobile қосымшасына қош келдіңіз";
+"Placeholder Paragraph" = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris cras nunc, a phasellus erat. Curabitur sit in arcu, imperdiet integer id. Enim diam.";
+"Get Started" = "Бастау";
+
+// MARK: - Login Screen
+"Welcome Back!" = "Қайтып қош келдіңіз!";
+"Email" = "Email";
+"Password" = "Құпия сөз";
+"Forgot Password?" = "Құпия сөзді ұмыттыңыз ба?";
+"Click here" = "Мында басыңыз";
+"Sign In" = "Кіру";
+"Don’t have an account?" = "Тіркелмедіңіз бе?";
+"Sign Up" = "Тіркелу";
+"Error" = "Қате";
+"Please fill out all required fields" = "Барлық қажетті өрістерді толтырыңыз";
+"OK" = "Жақсы";
+
+

@@ -9,30 +9,32 @@ import UIKit
 import PDFKit
 
 final class DocumentsViewModel: ObservableObject {
-    @Published var schools: [SchoolData]?
-    @Published var userData: UserDataModel?
     @Published var errorMessage: String?
     @Published var pdfDocument: PDFDocument?
-    
-    
-    let vc = UIViewController()
-    var pdfView = PDFView()
+    @Published var documents: [DocumentDataModel]?
     
     private var firebaseStorage: FirebaseStorageServiceProtocol?
+    private var firestoreService: FirestoreServiceProtocolNew?
     
-    init(firebaseStorage: FirebaseStorageServiceProtocol) {
+    init(firebaseStorage: FirebaseStorageServiceProtocol, firestoreService: FirestoreServiceProtocolNew) {
         self.firebaseStorage = firebaseStorage
-        
-        
-        pdfView = PDFView(frame: vc.view.bounds)
-        pdfView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        vc.view.addSubview(pdfView)
-
-        fetchDoc()
+        self.firestoreService = firestoreService
+        fetchHier()
     }
     
-    private func fetchDoc() {
-        firebaseStorage?.fetch(path: "КЭД ФИТ 2020-2021.pdf", completion: { result in
+    func fetchHier() {
+        firestoreService?.getDocuments(for: "documents", completion: { (result: Result<[DocumentDataModel], Error>) in
+            switch result {
+            case .success(let dataModel):
+                self.documents = dataModel
+            case .failure(let error):
+                self.errorMessage = error.localizedDescription
+            }
+        })
+    }
+    
+    func fetchDoc(path: String) {
+        firebaseStorage?.fetch(path: path, completion: { result in
             switch result {
             case .success(let doc):
                 DispatchQueue.main.async {
@@ -44,4 +46,7 @@ final class DocumentsViewModel: ObservableObject {
         })
     }
     
+    func nilPdfDoc() {
+        pdfDocument = nil
+    }
 }

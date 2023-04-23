@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct MobilityView: View {
+    
     let items = [
         CarouselItem(image: "mobilityImage1", title: "Student's personal funds"),
         CarouselItem(image: "mobilityImage2", title: "Republican budget funds (MSHE RK)"),
@@ -16,18 +17,27 @@ struct MobilityView: View {
     
     var body: some View {
         ScrollView {
-            VStack(spacing: 20){
-                Text("The possibility of sending students to study at partner universities for academic mobility depends on the results of the competition for academic mobility, available places at the partner university, and is carried out at the expense of:")
+            VStack(spacing: 0){
+                Text("The possibility of sending students to study at partner universities is carried out at the expense of:")
                     .padding(.horizontal)
                     .multilineTextAlignment(.leading)
                     .font(.body)
-                
-                CarouselSlider(items: items)
-                    .padding(.horizontal)
-                    .padding(.top, -150)
+//
+//                GeometryReader { geometry in
+//                    let size = geometry.size
+//                    VStack {
+//                        Text("\(size.width)")
+//                        Text("\(size.height)")
+//                    }
+                    CarouselSlider(items: items)
+                        .padding(.top, -140)
+//                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+//                }
+//                .background(.green)
+                //.padding(.horizontal)
             }
             
-            .padding(.top, 20)
+            //.padding(.top, 20)
         }
         .background(Color("backgroundColor"))
         .navigationTitle("Academic Mobility")
@@ -43,14 +53,16 @@ struct CarouselItem: Identifiable {
 struct CarouselSlider: View {
     @State private var currentIndex = 0
     let items: [CarouselItem]
-    
+    //let itemSize: CGSize
+
     var body: some View {
         GeometryReader { geometry in
+            let size = geometry.size
             VStack() {
                 HStack(spacing: 0) {
                     ForEach(items) { item in
                         CoatOfArmsCard(item: item)
-                            .frame(width: geometry.size.width)
+                            .frame(width: size.width)
                     }
                 }
                 .offset(x: -CGFloat(currentIndex) * geometry.size.width)
@@ -82,9 +94,12 @@ struct CarouselSlider: View {
                             }
                         }
                 }
+                //.frame(maxWidth: .infinity)
             }
-            .padding()
+            //.background(.green)
+            //.padding()
             .frame(maxWidth: .infinity)
+            
         }
         .ignoresSafeArea()
     }
@@ -113,19 +128,49 @@ struct ShieldShape: Shape {
 
 struct CoatOfArmsCard: View {
     let item: CarouselItem
-    @State private var isFlipped = false
     
+    @State private var isFlipped = false
+    //    @ObservedObject var viewModel = MobilityViewModel(firestoreService: FirestoreService<MobilityDataModel>())
+    //    @State private var showErrorAlert = false
+    //
     var body: some View {
+
         VStack {
             if isFlipped {
                 ShieldShape()
                     .fill(Color("academicmobilityColor"))
                     .frame(maxWidth: .infinity, maxHeight: .infinity)
                     .overlay(
-                        Text("Back of Card")
-                            .font(.largeTitle)
-                            .foregroundColor(.white)
-                            .padding()
+                        VStack(spacing:3) {
+                            Text("who can apply?")
+                                .font(.title3)
+                                .fontWeight(.bold)
+                            Text ("- bachelors of the 2nd and 3rd year of study\n- master students of the 2nd semester of study")
+                                .font(.body)
+                            Text("when?")
+                                .font(.title3)
+                                .fontWeight(.bold)
+                            Text("- bachelor's degree - from the spring semester of the 2nd year\n- master's degree - fall semester of the 2nd year")
+                                .font(.body)
+                            Text("requirements")
+                                .font(.title3)
+                                .fontWeight(.bold)
+                            Text("- GPA at least 2.5\n- English language proficiency level at least B2 (from the transcript) or IELTS 5.5 and above")
+                            Text("documents:")
+                                .font(.title3)
+                                .fontWeight(.bold)
+                            Text("- full transcript in English\n- scanned copy of the passport\ncertificate of English proficiency if necessary")
+                                .font(.body)
+                        }
+                            .frame(width: 350)
+                        //                        if let backofcard = viewModel.backofcard {
+                        //                            Text(backofcard.title ?? "")
+                        //                                .font(.largeTitle)
+                        //                                .foregroundColor(.white)
+                        //                                .padding()
+                        //                        } else {
+                        //                            ProgressView("Loading...")
+                        //                        }
                     )
                     .rotation3DEffect(.degrees(180), axis: (x: 0, y: 1, z: 0))
             } else {
@@ -135,29 +180,34 @@ struct CoatOfArmsCard: View {
                 //.shadow(radius: 10)
                     .overlay(
                         VStack(spacing:0) {
-                            
                             Text(item.title)
                                 .font(.title)
                                 .fontWeight(.semibold)
                                 .multilineTextAlignment(.center)
-                            //.padding()
                             
                             Image(item.image)
                                 .resizable()
                                 .scaledToFit()
                                 .frame(width: 350, height: 350)
-                            //
-                            //                        Divider()
-                            //
-                            //                        Text("Subtitle")
-                            //                            .font(.headline)
-                            //                            .foregroundColor(.secondary)
                         }
                     )
             }
         }
         .padding()
         .frame(width: 400, height: 750)
+        //        .onAppear { viewModel.fetchMobility() }
+        //        .onChange(of: viewModel.errorMessage) { errorMessage in
+        //            if errorMessage != nil {
+        //                showErrorAlert = true
+        //            }
+        //        }
+        //        .alert(isPresented: $showErrorAlert) {
+        //            Alert(
+        //                title: Text("Error fetching data"),
+        //                message: Text(viewModel.errorMessage ?? "Unknown error"),
+        //                dismissButton: .default(Text("OK"))
+        //            )
+        //        }
         .onTapGesture {
             withAnimation {
                 isFlipped.toggle()
@@ -165,7 +215,9 @@ struct CoatOfArmsCard: View {
         }
         .rotation3DEffect(.degrees(isFlipped ? 180 : 0), axis: (x: 0, y: 1, z: 0))
     }
+
 }
+
 
 
 struct MobilityView_Previews: PreviewProvider {

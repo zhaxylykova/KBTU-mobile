@@ -12,11 +12,12 @@ struct OnlineLibraryView: View {
         ScrollView {
             VStack(alignment: .leading, spacing: 20) {
                 Text("The research library database provides a list of available databases with a detailed description.")
-                    .font(.title2)
+                    .font(.title3)
+                    //.padding()
                 Text("All you have to do is to:")
                     .font(.title2)
                     .fontWeight(.semibold)
-                
+    
                 VStack(alignment: .leading, spacing: 20) {
                     HStack {
                         Image(systemName: "01.circle.fill")
@@ -43,19 +44,34 @@ struct OnlineLibraryView: View {
                             .font(.title3)
                     }
                 }
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
                 .padding()
                 .background(Color("lightpurpleColor"))
             }
-            .padding(30)
+            .padding()
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
+
+            //.padding(30)
             
             if let url = URL(string: "https://dbsl.kbtu.kz/") {
                 HStack {
-                    Link("Research Library Database", destination: url)
-                        .font(.title)
-                        .fontWeight(.bold)
-                    Image(systemName: "arrow.right")
+                    Link(destination: url) {
+                        Label (
+                            title: {
+                                Text("Research Library Database")
+                                    .font(.title2)
+                                    .fontWeight(.bold)
+                                    .padding()
+                            },
+                            icon: {
+                                Image(systemName: "arrow.right")
+                            }
+                        )
+                    }
+
                 }
             }
+
             Image("libraryImage")
                 .resizable()
                 .frame(width: 350, height: 350)

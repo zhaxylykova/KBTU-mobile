@@ -42,6 +42,8 @@ struct StudentGuideView: View {
                             Text(school.school ?? "")
                         }
                     }
+                } else {
+                    ProgressView()
                 }
             }
 //            Section("Others") {

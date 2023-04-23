@@ -71,6 +71,7 @@
 		AC3C337129ABADF6001C6A75 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AC3C337029ABADF5001C6A75 /* GoogleService-Info.plist */; };
 		AC42ADB529B302E60024D6EA /* MenuTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC42ADB429B302E60024D6EA /* MenuTextField.swift */; };
 		AC42ADB829B454BA0024D6EA /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC42ADB729B454BA0024D6EA /* StringExtension.swift */; };
+		AC50830B29F5117F00C49295 /* GpaCalculatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC50830A29F5117F00C49295 /* GpaCalculatorView.swift */; };
 		AC6BCC4B29F2416200C3A32C /* StudentGuideViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6BCC4A29F2416200C3A32C /* StudentGuideViewModel.swift */; };
 		AC6BCC4D29F243A800C3A32C /* SchoolDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6BCC4C29F243A800C3A32C /* SchoolDataModel.swift */; };
 		AC75060829BC73F80096105D /* GeneralError.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC75060729BC73F80096105D /* GeneralError.swift */; };
@@ -177,6 +178,7 @@
 		AC3C337029ABADF5001C6A75 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		AC42ADB429B302E60024D6EA /* MenuTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTextField.swift; sourceTree = "<group>"; };
 		AC42ADB729B454BA0024D6EA /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		AC50830A29F5117F00C49295 /* GpaCalculatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GpaCalculatorView.swift; sourceTree = "<group>"; };
 		AC6BCC4A29F2416200C3A32C /* StudentGuideViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentGuideViewModel.swift; sourceTree = "<group>"; };
 		AC6BCC4C29F243A800C3A32C /* SchoolDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolDataModel.swift; sourceTree = "<group>"; };
 		AC75060729BC73F80096105D /* GeneralError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralError.swift; sourceTree = "<group>"; };
@@ -286,6 +288,7 @@
 		AC01677629E86149008C5ED6 /* Submodules */ = {
 			isa = PBXGroup;
 			children = (
+				AC50830929F5113800C49295 /* GPACalculator */,
 				ACAAE92829E6A4F500C5308E /* Academic Mobility */,
 				ACAAE92A29E6A4F500C5308E /* Clubs */,
 				ACAAE92129E6A48F00C5308E /* StudentGuide */,
@@ -526,6 +529,14 @@
 				AC42ADB729B454BA0024D6EA /* StringExtension.swift */,
 			);
 			path = UIKit;
+			sourceTree = "<group>";
+		};
+		AC50830929F5113800C49295 /* GPACalculator */ = {
+			isa = PBXGroup;
+			children = (
+				AC50830A29F5117F00C49295 /* GpaCalculatorView.swift */,
+			);
+			path = GPACalculator;
 			sourceTree = "<group>";
 		};
 		AC957CD0297F99B20005515F = {
@@ -969,6 +980,7 @@
 				AC03490A29C9AB1C00CB5714 /* FloorDataModel.swift in Sources */,
 				ACB1E9D729E9854D004EA30B /* FirebaseStorageService.swift in Sources */,
 				AC42ADB829B454BA0024D6EA /* StringExtension.swift in Sources */,
+				AC50830B29F5117F00C49295 /* GpaCalculatorView.swift in Sources */,
 				AC3705C629A7733B0081657B /* OnboardingCoordinator.swift in Sources */,
 				AC24DC2129AB844000D7BCF8 /* HomeViewProtocols.swift in Sources */,
 				AC24DBF929AB812500D7BCF8 /* TabBarViewController.swift in Sources */,

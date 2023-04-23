@@ -8,8 +8,13 @@
 import SwiftUI
 
 struct MenuView: View {
+    
+    init() {
+        UINavigationBar.appearance().tintColor = .black
+    }
+    
     var body: some View {
-        ScrollView (showsIndicators: false){
+        ScrollView (showsIndicators: false) {
             VStack (spacing: 20) {
 
                 CellButton(
@@ -24,7 +29,7 @@ struct MenuView: View {
                         title: "GPA Calculator",
                         subtitle: "Because you want to save your scholarship, agree?",
                         color: Color("gpaColor"),
-                        destination: AnyView(StudentGuideView())
+                        destination: AnyView(GPAView())
                     )
                     
                     VStack (spacing: 20){

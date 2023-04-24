@@ -210,6 +210,8 @@ extension ProfileFillViewController: ProfileFillViewInput {
 // MARK: - TextFieldDelegate
 extension ProfileFillViewController: UITextFieldDelegate {
     func textFieldDidBeginEditing(_ textField: UITextField) {
+        let point = CGPoint(x: 0, y: textField.frame.origin.y - 50)
+        scrollView.setContentOffset(point, animated: true)
         switch textField {
         case mobilePhoneTextField:
             if mobilePhoneTextField.text == "" {
@@ -221,6 +223,7 @@ extension ProfileFillViewController: UITextFieldDelegate {
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
+        scrollView.setContentOffset(CGPoint.zero, animated: true)
         switch textField {
         case mobilePhoneTextField:
             guard let text = textField.text else { return }

@@ -9,7 +9,7 @@ import Foundation
 
 extension String {
     func isValidEmail() -> Bool {
-        let emailRegEx = "[A-Z0-9a-z._%+-]+@jusan.kz"
+        let emailRegEx = "[A-Z0-9a-z._%+-]+@kbtu.kz"
         let emailPred = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
         return emailPred.evaluate(with: self)
     }

@@ -51,8 +51,7 @@ final class MainCoordinator: BaseCoordinator, Coordinatable, ObservableObject, M
         // Profile
         let profileView = ProfileView(coordinator: self)
         let profileViewController = ProfileViewController(rootView: profileView)
-        let profileNavigationController = UINavigationController(rootViewController: profileViewController)
-        profileNavigationController.tabBarItem = UITabBarItem(title: "Profile", image: UIImage(systemName: "person"), selectedImage: nil)
+        profileViewController.tabBarItem = UITabBarItem(title: "Profile", image: UIImage(systemName: "person"), selectedImage: nil)
         
         let tabBarController = TabBarViewController()
         tabBarController.viewControllers = [
@@ -60,7 +59,7 @@ final class MainCoordinator: BaseCoordinator, Coordinatable, ObservableObject, M
             newsNavigationController,
             mapNavigationController,
             documentsNavigationController,
-            profileNavigationController
+            profileViewController
         ]
 
         navController.pushViewController(tabBarController, animated: true)

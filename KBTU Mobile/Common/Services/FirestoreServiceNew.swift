@@ -10,6 +10,7 @@ import Firebase
 protocol FirestoreServiceProtocolNew {
     func getDocuments<DataModel: Decodable>(for collection: String, completion: @escaping (Result<[DataModel], Error>) -> Void)
     func getDocument<DataModel: Decodable>(for collection: String, documentID: String, completion: @escaping (Result<DataModel, Error>) -> Void)
+    func updateDocument<DataModel: Encodable>(for collection: String, documentID: String, data: DataModel, completion: @escaping (Result<Void, Error>) -> Void)
 }
 
 final class FirestoreServiceNew: FirestoreServiceProtocolNew {
@@ -63,6 +64,23 @@ final class FirestoreServiceNew: FirestoreServiceProtocolNew {
             } catch {
                 let error = NSError(domain: "", code: 0, userInfo: [NSLocalizedDescriptionKey: "Error decoding JSON: \(error)"])
                 completion(.failure(error))
+            }
+        }
+    }
+    
+    func updateDocument<DataModel: Encodable>(for collection: String, documentID: String, data: DataModel, completion: @escaping (Result<Void, Error>) -> Void) {
+        let jsonData = try? JSONEncoder().encode(data)
+
+        if
+            let data = jsonData,
+            let jsonObject = try? JSONSerialization.jsonObject(with: data, options: .allowFragments) as? [String: Any]
+        {
+            self.db.collection(collection).document(documentID).updateData(jsonObject) { (error) in
+                if let error {
+                    completion(.failure(error))
+                } else {
+                    completion(.success(()))
+                }
             }
         }
     }

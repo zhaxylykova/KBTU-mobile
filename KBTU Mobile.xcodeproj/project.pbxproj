@@ -98,6 +98,7 @@
 		ACAAE93129E6A4F500C5308E /* KbtuFacesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAAE92C29E6A4F500C5308E /* KbtuFacesView.swift */; };
 		ACAAE93329E6A54400C5308E /* OnlineLibraryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAAE93229E6A54400C5308E /* OnlineLibraryView.swift */; };
 		ACAB3CEC29E5CED3003E4933 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAB3CEB29E5CED3003E4933 /* ProfileView.swift */; };
+		ACB16A3729F6918C00A020AE /* ImagePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB16A3629F6918C00A020AE /* ImagePickerView.swift */; };
 		ACB16F4429BCA6A30001AA59 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = ACB16F4629BCA6A30001AA59 /* Localizable.strings */; };
 		ACB16F4A29BCAC630001AA59 /* Text.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB16F4929BCAC630001AA59 /* Text.swift */; };
 		ACB1E9D129E91D66004EA30B /* ScholarshipDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB1E9D029E91D66004EA30B /* ScholarshipDataModel.swift */; };
@@ -208,6 +209,7 @@
 		ACAAE92C29E6A4F500C5308E /* KbtuFacesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KbtuFacesView.swift; sourceTree = "<group>"; };
 		ACAAE93229E6A54400C5308E /* OnlineLibraryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnlineLibraryView.swift; sourceTree = "<group>"; };
 		ACAB3CEB29E5CED3003E4933 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		ACB16A3629F6918C00A020AE /* ImagePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerView.swift; sourceTree = "<group>"; };
 		ACB16F4529BCA6A30001AA59 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		ACB16F4729BCA6BF0001AA59 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		ACB16F4829BCA6E00001AA59 /* kk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = kk; path = kk.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -491,6 +493,7 @@
 				AC24DC1529AB837400D7BCF8 /* ProfileViewController.swift */,
 				ACAB3CEB29E5CED3003E4933 /* ProfileView.swift */,
 				AC01677129E85EFC008C5ED6 /* SettingsView.swift */,
+				ACB16A3629F6918C00A020AE /* ImagePickerView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -940,6 +943,7 @@
 				AC6BCC4B29F2416200C3A32C /* StudentGuideViewModel.swift in Sources */,
 				AC3705DB29A7B68D0081657B /* LogInViewProtocols.swift in Sources */,
 				AC3705D929A7B34A0081657B /* BaseCoordinator.swift in Sources */,
+				ACB16A3729F6918C00A020AE /* ImagePickerView.swift in Sources */,
 				AC1B8C2129D9644600906817 /* NewsCardContentView.swift in Sources */,
 				ACAAE93129E6A4F500C5308E /* KbtuFacesView.swift in Sources */,
 				AC24DC1429AB836500D7BCF8 /* ProfileViewModel.swift in Sources */,

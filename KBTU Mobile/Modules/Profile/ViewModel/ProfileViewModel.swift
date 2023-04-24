@@ -21,6 +21,14 @@ final class ProfileViewModel: ObservableObject {
         fetchUserData()
     }
     
+    func getAvatarImage() -> UIImage {
+        guard
+            let data = UserDefaults.standard.object(forKey: "test") as? Data,
+            let image = UIImage(data: data)
+        else { return UIImage(named: "backImageProfile") ?? UIImage() }
+        return image
+    }
+    
     func fetchUserData() {
         guard let userId = Auth.auth().currentUser?.uid else { return }
         firestoreService?.getDocument(for: "users", documentID: userId, completion: { [weak self] (result: Result<UserDataModel, Error>) in
@@ -30,6 +38,16 @@ final class ProfileViewModel: ObservableObject {
             case .failure(let error):
                 self?.errorMessage = error.localizedDescription
             }
+        })
+    }
+    
+    func updateUserData(with userData: UserDataModel?) {
+        guard
+            let userData,
+            let userId = Auth.auth().currentUser?.uid
+        else { return }
+        firestoreService?.updateDocument(for: "users", documentID: userId, data: userData, completion: { result in
+            self.fetchUserData()
         })
     }
     

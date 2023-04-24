@@ -15,7 +15,7 @@ struct GPAView: View {
     let grades = ["A", "A-", "B+", "B", "B-", "C+", "C", "C-", "D+", "D", "F", "AW"]
     
     var body: some View {
-        ScrollView {
+        ScrollView(showsIndicators: false) {
             VStack {
                 ForEach(semesters.indices, id: \.self) { semesterIndex in
                     VStack {

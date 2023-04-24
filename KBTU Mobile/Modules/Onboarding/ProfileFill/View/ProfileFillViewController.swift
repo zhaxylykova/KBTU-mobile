@@ -61,7 +61,9 @@ final class ProfileFillViewController: UIViewController {
         TextFieldFactory().makeDefaultTextField(withTitle: "Mobile phone*")
     }()
     private let studentIdTextField: UITextField = {
-        TextFieldFactory().makeDefaultTextField(withTitle: "Student ID*")
+        let textField = TextFieldFactory().makeDefaultTextField(withTitle: "Student ID*")
+        textField.autocapitalizationType = .allCharacters
+        return textField
     }()
     private let facultyTextField: UITextField = {
         let textField = TextFieldFactory().makeMenuTextField(withTitle: "Faculty*")
@@ -157,7 +159,7 @@ final class ProfileFillViewController: UIViewController {
         signUpButton.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
             make.top.equalTo(termsStackView.snp.bottom).offset(26)
-            make.bottom.equalToSuperview().inset(32)
+            make.bottom.equalToSuperview().inset(60)
         }
     }
     
@@ -241,7 +243,7 @@ extension ProfileFillViewController: UITextFieldDelegate {
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         switch textField {
-        case studentIdTextField, mobilePhoneTextField:
+        case mobilePhoneTextField:
             let allowedCharacters = CharacterSet.decimalDigits
             let characterSet = CharacterSet(charactersIn: string)
             return allowedCharacters.isSuperset(of: characterSet)

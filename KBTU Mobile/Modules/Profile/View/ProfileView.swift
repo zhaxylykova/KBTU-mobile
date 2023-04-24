@@ -22,7 +22,7 @@ struct ProfileView: View {
         ZStack {
             Color("backgroundColor")
                 .edgesIgnoringSafeArea(.all)
-            ScrollView {
+            ScrollView(showsIndicators: false) {
                 if let userData = viewModel.userData {
                     VStack {
                         Image(uiImage: (selectedImage ?? UIImage(named: "backImageProfile")) ?? UIImage())

@@ -16,12 +16,12 @@ final class AppCoordinator: BaseCoordinator, Coordinatable {
     var navController: UINavigationController
     
     private var instructor: LaunchInstructor {
-        let isAuthorized = UserDefaults.standard.bool(forKey: "isAuthorized")
-        if isAuthorized {
+//        let isAuthorized = UserDefaults.standard.bool(forKey: "isAuthorized")
+//        if isAuthorized {
             return .main
-        } else {
-            return .onboarding
-        }
+//        } else {
+//            return .onboarding
+//        }
     }
     
     init(navController: UINavigationController) {

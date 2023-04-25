@@ -10,7 +10,7 @@ import SwiftUI
 struct ScholarshipsView: View {
     @ObservedObject var viewModel = ScholarshipsViewModel(firestoreService: FirestoreService<ScholarshipDataModel>())
     @State private var showErrorAlert = false
-    
+
     var body: some View {
     Color("backgroundColor")
             .ignoresSafeArea(.all)
@@ -18,16 +18,44 @@ struct ScholarshipsView: View {
         ScrollView {
             VStack {
                 if let scholarships = viewModel.scholarships {
-                    ForEach(scholarships) { scholarship in
-                        HStack {
-                            Text(scholarship.title ?? "")
-                                .font(.title)
-                                .fontWeight(.bold)
-                            Spacer()
-                            Text(scholarship.title ?? "")
+                    ForEach(0..<scholarships.count, id: \.self) { index in
+                        if index % 3 == 0 {
+                            NavigationLink(destination: InfoView(scholarship: scholarships[index])) {
+                                Text(scholarships[index].title ?? "")
+                                    .font(.title)
+                                    .foregroundColor(Color("darkPurple"))
+                                    .padding()
+                                    .frame(width: 360, height: 100)
+                                    .background(Color("purpleColor"))
+                                    .cornerRadius(15)
+                                    .padding(.top,10)
+                            }
+                        } else if index % 3 == 1 {
+                            HStack(spacing: 20) {
+                                NavigationLink(destination: InfoView(scholarship: scholarships[index])) {
+                                    Text(scholarships[index].title ?? "")
+                                        .font(.title)
+                                        .foregroundColor(Color("darkPurple"))
+                                        .padding()
+                                        .frame(width: 170, height: 100)
+                                        .background(Color("lightBlue"))
+                                        .cornerRadius(15)
+                                }
+                                if index + 1 < scholarships.count {
+                                    NavigationLink(destination: InfoView(scholarship: scholarships[index + 1])) {
+                                        Text(scholarships[index + 1].title ?? "")
+                                            .font(.title)
+                                            .foregroundColor(Color("darkPurple"))
+                                            .padding()
+                                            .frame(width: 170, height: 100)
+                                            .background(Color("clubsColor"))
+                                            .cornerRadius(15)
+                                    }
+                                }
+                            }
+                            .frame(height: 80)
+                            .padding(12)
                         }
-                        .frame(height: 80)
-                        .padding(12)
                     }
                 } else {
                     ProgressView("Loading...")
@@ -52,87 +80,9 @@ struct ScholarshipsView: View {
     }
 }
 
-//struct ScholarshipsView: View {
-//
-//    @ObservedObject var viewModel = ScholarshipsViewModel()
-//
-//    var body: some View {
-//        VStack(spacing: 25) {
-//            NavigationLink(destination: InfoView()){
-//                Text("KAZENERGY")
-//                    .font(.title)
-//                    .foregroundColor(Color("darkPurple"))
-//                    .padding()
-//                    .frame(width: 390, height: 100)
-//                    .background(Color("purpleColor"))
-//                    .cornerRadius(15)
-//                    .padding(.top,10)
-//            }
-//
-//            HStack(spacing: 20){
-//                NavigationLink(destination: SecondView(color:.red)){
-//                    Text("ERASMUS")
-//                        .font(.title)
-//                        .foregroundColor(Color("darkPurple"))
-//                        .padding()
-//                        .frame(width: 185, height: 100)
-//                        .background(Color("lightBlue"))
-//                        .cornerRadius(15)
-//                }
-//
-//                NavigationLink(destination: SecondView(color:.red)){
-//                    Text("KBTU ALUMNI")
-//                        .font(.title)
-//                        .foregroundColor(Color("darkPurple"))
-//                        .padding()
-//                        .frame(width: 185, height: 100)
-//                        .background(Color("lightOrange"))
-//                        .cornerRadius(15)
-//                }
-//            }
-//
-//            NavigationLink(destination: SecondView(color:.red)){
-//                Text("DENIS TEN")
-//                    .font(.title)
-//                    .foregroundColor(Color("darkPurple"))
-//                    .padding()
-//                    .frame(width: 390, height: 100)
-//                    .background(Color("Blue"))
-//                    .cornerRadius(15)
-//            }
-//
-//            HStack(spacing: 20){
-//                NavigationLink(destination: SecondView(color:.red)){
-//                    Text("CREATIVE SPARK")
-//                        .font(.title)
-//                        .foregroundColor(Color("darkPurple"))
-//                        .padding()
-//                        .frame(width: 185, height: 100)
-//                        .background(Color("purpleColor"))
-//                        .cornerRadius(15)
-//                }
-//
-//                NavigationLink(destination: SecondView(color:.red)){
-//                    Text("BRITISH COUNCIL")
-//                        .font(.title)
-//                        .foregroundColor(Color("darkPurple"))
-//                        .padding()
-//                        .frame(width: 185, height: 100)
-//                        .background(Color("lightPink"))
-//                        .cornerRadius(15)
-//                }
-//            }
-//            Spacer()
-//        }
-//        .padding()
-//        .navigationBarTitle("Scholarships")
-//        .background(Color("backgroundColor"))
-//    }
-//}
-
 struct SecondView: View {
     let color: Color
-    
+
     var body: some View{
         ZStack{
             color.edgesIgnoringSafeArea(.all)

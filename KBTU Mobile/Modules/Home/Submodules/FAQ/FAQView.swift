@@ -28,7 +28,7 @@ struct FAQView: View {
                                     .multilineTextAlignment(.leading)
                         }//navlink closed
                         
-                        NavigationLink(destination: InfoView()){
+                        NavigationLink(destination: InfoView(scholarship: ScholarshipDataModel(data: [:]))){
                             VStack(alignment: .leading){
                                 Text("Academic Mobility Info")
                                     .font(.title)
@@ -44,7 +44,7 @@ struct FAQView: View {
                         }//navlink closed
                     } // vstack closed
                     VStack(alignment: .trailing, spacing: 20){
-                        NavigationLink(destination: InfoView()){
+                        NavigationLink(destination: InfoView(scholarship: ScholarshipDataModel(data: [:]))){
                             VStack(alignment: .leading){
                                 Text("Payment Info")
                                     .font(.title)
@@ -59,7 +59,7 @@ struct FAQView: View {
                             .multilineTextAlignment(.leading)
                         }//navlink closed
 
-                        NavigationLink(destination: InfoView()){
+                        NavigationLink(destination: InfoView(scholarship: ScholarshipDataModel(data: [:]))){
                             VStack(alignment: .leading){
                                 Text("Accomodation info")
                                     .font(.title)
@@ -75,7 +75,7 @@ struct FAQView: View {
                     } // vstack closed
                 //    .padding(.trailing,60)
                 }//hstack closed
-                NavigationLink(destination: InfoView()){
+                NavigationLink(destination: InfoView(scholarship: ScholarshipDataModel(data: [:]))){
                     VStack(alignment: .leading){
                         Text("Other")
                             .font(.title)

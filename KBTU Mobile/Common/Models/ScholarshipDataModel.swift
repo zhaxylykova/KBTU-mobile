@@ -13,13 +13,13 @@ struct ScholarshipDataModel: FirestoreDataModel, Identifiable {
     var description: String?
     var conditions: [String]?
     var documents: [String]?
-    var source: URL?
+    var source: String?
     
     init(data: [String: Any]) {
         self.title = data["title"] as? String
         self.description = data["description"] as? String
         self.conditions = data["conditions"] as? [String]
         self.documents = data["documents"] as? [String]
-        self.source = URL(string: data["source"] as? String ?? "")
+        self.source = data["source"] as? String
     }
 }

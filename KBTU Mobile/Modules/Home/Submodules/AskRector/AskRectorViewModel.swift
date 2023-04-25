@@ -9,13 +9,9 @@ import UIKit
 import Firebase
 
 final class AskRectorViewModel: ObservableObject {
-    
-    let fromEmail = "kbtu.mobile@gmail.com" // YOUR EMAIL HERE
-    let fromName = "KBTU Mobile App" // YOUR NAME HERE
-    let toEmail = "kbtu.mobile@gmail.com" // PUT EMAIL HERE
-    
-    let emailSubject = "My email title"
-    let emailBody = "Hello this is my email\n\nIt is multi-line\n123\nFrom\nKBTU Mobile"
+    private let fromEmail = "kbtu.mobile@gmail.com"
+    private let fromName = "KBTU Mobile App"
+    private let toEmail = "kbtu.mobile@gmail.com"
     
     func configureAndSendEmail(subject: String, typeOfAppeal: String, body: String) {
         let smtpSession = self.createSMTPSession()

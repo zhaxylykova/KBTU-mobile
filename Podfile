@@ -12,5 +12,6 @@ target 'KBTU Mobile' do
   pod 'FirebaseFirestore'
   pod 'FirebaseStorage'
   pod 'SnapKit'
-
+  pod 'mailcore2-ios'
+  
 end

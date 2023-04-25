@@ -8,6 +8,7 @@
 struct SchoolData: Codable {
     let staff: [String: Staff]?
     let school: String?
+    let category: String?
 }
 
 struct Staff: Codable {

@@ -8,9 +8,12 @@
 import SwiftUI
 
 struct AskRectorView: View {
-    @State private var topic = ""
+    @State private var subject = ""
     @State private var typeOfAppeal = "Statement"
     @State private var bodyText = ""
+    @State private var showAlert = false
+    
+    @ObservedObject private var viewModel = AskRectorViewModel()
 
     private let typesOfAppeal = ["Statement", "Feedback", "Offer"]
 
@@ -25,7 +28,7 @@ struct AskRectorView: View {
 
             Form {
                 Section {
-                    TextField("Topic", text: $topic)
+                    TextField("Topic", text: $subject)
                         .font(.title)
                         .padding(.vertical, 8)
 
@@ -45,10 +48,14 @@ struct AskRectorView: View {
                         .font(.title2)
                         .padding(.vertical, 8)
                 }
-            } // form closed
+            }
             .listRowBackground(Color.white)
             Button(action: {
-                print("Send button tapped")
+                if !subject.isEmpty && !bodyText.isEmpty {
+                    viewModel.configureAndSendEmail(subject: subject, typeOfAppeal: typeOfAppeal, body: bodyText)
+                } else {
+                    showAlert = true
+                }
             }) {
                 Text("send")
                     .fontWeight(.semibold)
@@ -59,10 +66,17 @@ struct AskRectorView: View {
                     .foregroundColor(Color.black)
                     .cornerRadius(40)
             }
-        } //Vstack closed
+        }
         .padding(20)
         .navigationBarTitleDisplayMode(.inline)
         .background(Color("backgroundColor"))
+        .alert(isPresented: $showAlert) {
+            Alert(
+                title: Text("Error"),
+                message: Text("Please fill out all fields"),
+                dismissButton: .default(Text("OK"))
+            )
+        }
     }
 }
 struct AskRectorView_Previews: PreviewProvider {

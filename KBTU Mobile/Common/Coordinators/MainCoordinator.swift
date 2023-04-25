@@ -23,7 +23,7 @@ final class MainCoordinator: BaseCoordinator, Coordinatable, ObservableObject, M
         let homeViewController = HomeViewController(rootView: MenuView())
         homeViewController.coordinator = self
 //        let homeNavigationController = UINavigationController(rootViewController: homeViewController)
-        homeViewController.tabBarItem = UITabBarItem(title: "Home", image: UIImage(systemName: "house"), selectedImage: nil)
+        homeViewController.tabBarItem = UITabBarItem(title: "Menu", image: UIImage(systemName: "house"), selectedImage: nil)
         
         // News
         let newsViewController = NewsViewController()
@@ -45,8 +45,7 @@ final class MainCoordinator: BaseCoordinator, Coordinatable, ObservableObject, M
         // Documents
         let documentsViewController = DocumentsViewController(rootView: DocumentsView())
         documentsViewController.coordinator = self
-        let documentsNavigationController = UINavigationController(rootViewController: documentsViewController)
-        documentsNavigationController.tabBarItem = UITabBarItem(title: "Documents", image: UIImage(systemName: "doc"), selectedImage: nil)
+        documentsViewController.tabBarItem = UITabBarItem(title: "Documents", image: UIImage(systemName: "doc"), selectedImage: nil)
 
         // Profile
         let profileView = ProfileView(coordinator: self)
@@ -58,7 +57,7 @@ final class MainCoordinator: BaseCoordinator, Coordinatable, ObservableObject, M
             homeViewController,
             newsNavigationController,
             mapNavigationController,
-            documentsNavigationController,
+            documentsViewController,
             profileViewController
         ]
 

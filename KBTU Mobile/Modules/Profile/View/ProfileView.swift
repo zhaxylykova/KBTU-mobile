@@ -100,7 +100,9 @@ struct ProfileView: View {
                 Alert(
                     title: Text("Error"),
                     message: Text(viewModel.errorMessage ?? "An unknown error occurred."),
-                    dismissButton: .default(Text("OK"))
+                    dismissButton: .default(Text("OK")) {
+                        showErrorAlert = true
+                    }
                 )
             }
             .onReceive(viewModel.$userData) { userData in

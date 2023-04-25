@@ -35,24 +35,28 @@ struct StudentGuideView: View {
     
     var body: some View {
         List {
-            Section("Schools") {
-                if let schools = viewModel.schools {
+            if let schools = viewModel.schools {
+                Section("Schools") {
                     ForEach(schools, id: \.school) { school in
-                        NavigationLink(destination: StudentGuideDetails(staff: school.staff ?? [:])) {
-                            Text(school.school ?? "")
+                        if school.category == "school" {
+                            NavigationLink(destination: StudentGuideDetails(staff: school.staff ?? [:])) {
+                                Text(school.school ?? "")
+                            }
                         }
                     }
-                } else {
-                    ProgressView()
                 }
+                Section("Others") {
+                    ForEach(schools, id: \.school) { school in
+                        if school.category == "other" {
+                            NavigationLink(destination: StudentGuideDetails(staff: school.staff ?? [:])) {
+                                Text(school.school ?? "")
+                            }
+                        }
+                    }
+                }
+            } else {
+                ProgressView()
             }
-//            Section("Others") {
-//                ForEach(others, id: \.name) { other in
-//                    NavigationLink(destination: StudentGuideDetails(title: other.name)) {
-//                        Text(other.name)
-//                    }
-//                }
-//            }
         }
     }
 }

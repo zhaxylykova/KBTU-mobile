@@ -111,6 +111,7 @@
 		ACEB020629A271390078218F /* ProfileFillViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEB020529A271390078218F /* ProfileFillViewModel.swift */; };
 		ACEB020F29A27FD40078218F /* FirebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEB020E29A27FD40078218F /* FirebaseService.swift */; };
 		ACEB021629A284740078218F /* UserDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEB021529A284740078218F /* UserDataModel.swift */; };
+		ACF0813229F82844001F8AAA /* AskRectorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF0813129F82844001F8AAA /* AskRectorViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -210,6 +211,7 @@
 		ACAAE93229E6A54400C5308E /* OnlineLibraryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnlineLibraryView.swift; sourceTree = "<group>"; };
 		ACAB3CEB29E5CED3003E4933 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		ACB16A3629F6918C00A020AE /* ImagePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerView.swift; sourceTree = "<group>"; };
+		ACB16A3829F8133A00A020AE /* MailCore2_bridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MailCore2_bridge.h; sourceTree = "<group>"; };
 		ACB16F4529BCA6A30001AA59 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		ACB16F4729BCA6BF0001AA59 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		ACB16F4829BCA6E00001AA59 /* kk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = kk; path = kk.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -224,6 +226,7 @@
 		ACEB020529A271390078218F /* ProfileFillViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileFillViewModel.swift; sourceTree = "<group>"; };
 		ACEB020E29A27FD40078218F /* FirebaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseService.swift; sourceTree = "<group>"; };
 		ACEB021529A284740078218F /* UserDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataModel.swift; sourceTree = "<group>"; };
+		ACF0813129F82844001F8AAA /* AskRectorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AskRectorViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -279,6 +282,7 @@
 			children = (
 				AC01676C29E85E7D008C5ED6 /* AskTheRectorView.swift */,
 				AC01676D29E85E7D008C5ED6 /* AskRectorView.swift */,
+				ACF0813129F82844001F8AAA /* AskRectorViewModel.swift */,
 			);
 			path = AskRector;
 			sourceTree = "<group>";
@@ -587,6 +591,7 @@
 				AC3C337029ABADF5001C6A75 /* GoogleService-Info.plist */,
 				ACB16F4929BCAC630001AA59 /* Text.swift */,
 				ACB16F4629BCA6A30001AA59 /* Localizable.strings */,
+				ACB16A3829F8133A00A020AE /* MailCore2_bridge.h */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -930,6 +935,7 @@
 				AC24DC0529AB82FB00D7BCF8 /* HomeViewController.swift in Sources */,
 				ACAAE93329E6A54400C5308E /* OnlineLibraryView.swift in Sources */,
 				AC164FF229AF6C2D00B148D5 /* GlobalConstants.swift in Sources */,
+				ACF0813229F82844001F8AAA /* AskRectorViewModel.swift in Sources */,
 				AC3705D529A7AEE70081657B /* GetStartedViewProtocols.swift in Sources */,
 				ACEB020629A271390078218F /* ProfileFillViewModel.swift in Sources */,
 				AC86083F29A7D00400E9B4C8 /* LabelFactory.swift in Sources */,
@@ -1154,6 +1160,36 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 53BQTSYPT9;
 				GENERATE_INFOPLIST_FILE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/BoringSSL-GRPC/openssl_grpc.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseAppCheckInterop/FirebaseAppCheckInterop.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseAuth/FirebaseAuth.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseAuthInterop/FirebaseAuthInterop.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseCore/FirebaseCore.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseCoreExtension/FirebaseCoreExtension.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseCoreInternal/FirebaseCoreInternal.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseFirestore/FirebaseFirestore.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseInstallations/FirebaseInstallations.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseStorage/FirebaseStorage.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/GoogleUtilities/GoogleUtilities.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/Libuv-gRPC/uv.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/PromisesObjC/FBLPromises.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/Shuffle-iOS/Shuffle_iOS.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/SnapKit/SnapKit.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/abseil/absl.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/gRPC-C++/grpcpp.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/gRPC-Core/grpc.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/leveldb-library/leveldb.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/nanopb/nanopb.framework/Headers\"",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/Firebase\"",
+					"\"${PODS_ROOT}/Headers/Public/mailcore2-ios\"",
+					"\"${PODS_ROOT}/Headers/Public/mailcore2-ios/MailCore\"",
+					"$(inherited)",
+					"${PODS_ROOT}/Firebase/CoreOnly/Sources",
+				);
 				INFOPLIST_FILE = "KBTU Mobile/Resources/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -1168,6 +1204,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "kbtu-mobile.app";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "KBTU Mobile/Resources/MailCore2_bridge.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1183,6 +1220,36 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 53BQTSYPT9;
 				GENERATE_INFOPLIST_FILE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/BoringSSL-GRPC/openssl_grpc.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseAppCheckInterop/FirebaseAppCheckInterop.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseAuth/FirebaseAuth.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseAuthInterop/FirebaseAuthInterop.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseCore/FirebaseCore.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseCoreExtension/FirebaseCoreExtension.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseCoreInternal/FirebaseCoreInternal.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseFirestore/FirebaseFirestore.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseInstallations/FirebaseInstallations.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseStorage/FirebaseStorage.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/GoogleUtilities/GoogleUtilities.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/Libuv-gRPC/uv.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/PromisesObjC/FBLPromises.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/Shuffle-iOS/Shuffle_iOS.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/SnapKit/SnapKit.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/abseil/absl.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/gRPC-C++/grpcpp.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/gRPC-Core/grpc.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/leveldb-library/leveldb.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/nanopb/nanopb.framework/Headers\"",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/Firebase\"",
+					"\"${PODS_ROOT}/Headers/Public/mailcore2-ios\"",
+					"\"${PODS_ROOT}/Headers/Public/mailcore2-ios/MailCore\"",
+					"$(inherited)",
+					"${PODS_ROOT}/Firebase/CoreOnly/Sources",
+				);
 				INFOPLIST_FILE = "KBTU Mobile/Resources/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -1197,6 +1264,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "kbtu-mobile.app";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "KBTU Mobile/Resources/MailCore2_bridge.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

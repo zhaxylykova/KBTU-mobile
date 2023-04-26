@@ -22,8 +22,14 @@ final class NewsCardContentView: UIView {
     }()
     
     private let titleLabel: UILabel = {
-        let label = LabelFactory.makeDefaultLabel(text: "", fontSize: .subtitle)
+        let label = LabelFactory.makeBoldLabel(text: "", fontSize: .subtitle)
         label.numberOfLines = 0
+        label.setContentCompressionResistancePriority(.required, for: .vertical)
+        return label
+    }()
+    
+    private let dateLabel: UILabel = {
+        let label = LabelFactory.makeDefaultLabel(text: "", fontSize: .caption)
         label.setContentCompressionResistancePriority(.required, for: .vertical)
         return label
     }()
@@ -31,7 +37,6 @@ final class NewsCardContentView: UIView {
     private let descriptionLabel: UILabel = {
         let label = LabelFactory.makeDefaultLabel(text: "", fontSize: .body)
         label.numberOfLines = 0
-        label.textAlignment = .justified
         label.lineBreakMode = .byTruncatingTail
         return label
     }()
@@ -47,11 +52,12 @@ final class NewsCardContentView: UIView {
         return gradient
     }()
     
-    init(withImage image: UIImage?, title: String, description: String) {
+    init(withImage image: UIImage?, title: String, description: String, date: String) {
         super.init(frame: .zero)
         imageView.image = image
         titleLabel.text = title
         descriptionLabel.text = description
+        dateLabel.text = date
         setupUI()
     }
     
@@ -70,7 +76,7 @@ final class NewsCardContentView: UIView {
             }
         }
         
-        [titleLabel, descriptionLabel].forEach { subview in
+        [titleLabel, dateLabel, descriptionLabel].forEach { subview in
             containerView.addSubview(subview)
         }
         
@@ -79,10 +85,15 @@ final class NewsCardContentView: UIView {
             make.horizontalEdges.equalToSuperview().inset(16)
         }
         
-        descriptionLabel.snp.makeConstraints { make in
+        dateLabel.snp.makeConstraints { make in
             make.top.equalTo(titleLabel.snp.bottom).offset(16)
+            make.leading.equalToSuperview().inset(16)
+        }
+        
+        descriptionLabel.snp.makeConstraints { make in
+            make.top.equalTo(dateLabel.snp.bottom).offset(16)
             make.horizontalEdges.equalTo(titleLabel)
-            make.bottom.equalToSuperview()
+            make.bottom.lessThanOrEqualTo(containerView.snp.bottom).inset(16)
         }
         
         applyShadowAndGradient()

@@ -128,7 +128,7 @@ extension NewsViewController: SwipeCardStackDataSource, SwipeCardStackDelegate {
         let card = SwipeCard()
         let model = filteredNews[index]
         card.swipeDirections = [.right]
-        card.content = NewsCardContentView(withImage: model.image, title: model.title, description: model.description)
+        card.content = NewsCardContentView(withImage: model.image, title: model.title, description: model.description, date: model.date)
         return card
     }
     
@@ -139,8 +139,9 @@ extension NewsViewController: SwipeCardStackDataSource, SwipeCardStackDelegate {
     func cardStack(_ cardStack: SwipeCardStack, didSelectCardAt index: Int) {
         let title = filteredNews[index].title
         let description = filteredNews[index].description
+        let date = filteredNews[index].date
         let vc = NewsDetailsViewController()
-        vc.set(title: title, description: description)
+        vc.set(title: title, description: description, date: date)
         present(vc, animated: true)
     }
 }

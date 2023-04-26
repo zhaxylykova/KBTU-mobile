@@ -10,7 +10,11 @@ import UIKit
 final class NewsDetailsViewController: UIViewController {
     
     private let titleLabel: UILabel = {
-        LabelFactory.makeDefaultLabel(text: "", fontSize: .subtitle)
+        LabelFactory.makeBoldLabel(text: "", fontSize: .subtitle)
+    }()
+    
+    private let dateLabel: UILabel = {
+        LabelFactory.makeDefaultLabel(text: "", fontSize: .caption)
     }()
     
     private let descriptionLabel: UILabel = {
@@ -23,13 +27,14 @@ final class NewsDetailsViewController: UIViewController {
         setupUI()
     }
     
-    func set(title: String, description: String) {
+    func set(title: String, description: String, date: String) {
         titleLabel.text = title
         descriptionLabel.text = description
+        dateLabel.text = date
     }
     
     private func setupUI() {
-        [titleLabel, descriptionLabel].forEach { subview in
+        [titleLabel, dateLabel, descriptionLabel].forEach { subview in
             subview.numberOfLines = 0
             view.addSubview(subview)
         }
@@ -40,9 +45,14 @@ final class NewsDetailsViewController: UIViewController {
             make.horizontalEdges.equalToSuperview().inset(32)
         }
         
+        dateLabel.snp.makeConstraints { make in
+            make.top.equalTo(titleLabel.snp.bottom).offset(16)
+            make.leading.equalToSuperview().inset(48)
+        }
+        
         descriptionLabel.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
-            make.top.equalTo(titleLabel.snp.bottom).offset(32)
+            make.top.equalTo(dateLabel.snp.bottom).offset(16)
             make.horizontalEdges.equalTo(titleLabel)
         }
     }

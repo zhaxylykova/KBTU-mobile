@@ -74,11 +74,35 @@ struct AskRectorView: View {
             Alert(
                 title: Text("Error"),
                 message: Text("Please fill out all fields"),
-                dismissButton: .default(Text("OK"))
+                dismissButton: .default(Text("OK")) {
+                    showAlert = false
+                }
+            )
+        }
+        .alert(isPresented: $viewModel.showErrorMessage) {
+            Alert(
+                title: Text("Error fetching data"),
+                message: Text(""),
+                dismissButton: .default(Text("OK")) {
+                    viewModel.showErrorMessage = false
+                }
+            )
+        }
+        .alert(isPresented: $viewModel.showSuccessMessage) {
+            Alert(
+                title: Text(""),
+                message: Text("You have successfully sent your message"),
+                dismissButton: .default(Text("OK")) {
+                    viewModel.showSuccessMessage = false
+                    subject = ""
+                    bodyText = ""
+                    UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
+                }
             )
         }
     }
 }
+
 struct AskRectorView_Previews: PreviewProvider {
     static var previews: some View {
         AskRectorView()

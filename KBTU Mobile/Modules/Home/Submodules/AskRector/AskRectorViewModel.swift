@@ -2,13 +2,16 @@
 //  AskRectorViewModel.swift
 //  KBTU Mobile
 //
-//  Created by Olzhas Seilkhanov on 25.04.2023.
+//  Created by Karina Abubakirova on 25.04.2023.
 //
 
 import UIKit
 import Firebase
 
 final class AskRectorViewModel: ObservableObject {
+    @Published var showErrorMessage = false
+    @Published var showSuccessMessage = false
+    
     private let fromEmail = "kbtu.mobile@gmail.com"
     private let fromName = "KBTU Mobile App"
     private let toEmail = "kbtu.mobile@gmail.com"
@@ -57,11 +60,11 @@ final class AskRectorViewModel: ObservableObject {
         
         let builderData = builder.data()
         
-        smtpSession.sendOperation(with: builderData).start { error in
+        smtpSession.sendOperation(with: builderData).start { [weak self] error in
             if error != nil {
-                NSLog("Error sending email: \(String(describing: error))")
+                self?.showErrorMessage = true
             } else {
-                NSLog("Email sent!")
+                self?.showSuccessMessage = true
             }
         }
     }

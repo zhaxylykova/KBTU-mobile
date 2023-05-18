@@ -2,7 +2,7 @@
 //  ImagePickerView.swift
 //  KBTU Mobile
 //
-//  Created by Olzhas Seilkhanov on 24.04.2023.
+//  Created by Karina Abubakirova on 24.04.2023.
 //
 
 import UIKit

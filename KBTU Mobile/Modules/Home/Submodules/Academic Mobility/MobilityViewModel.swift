@@ -2,7 +2,7 @@
 //  MobilityViewModel.swift
 //  KBTU Mobile
 //
-//  Created by Olzhas Seilkhanov on 26.04.2023.
+//  Created by Karina Abubakirova on 26.04.2023.
 //
 
 import SwiftUI

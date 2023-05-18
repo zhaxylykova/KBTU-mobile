@@ -2,7 +2,7 @@
 //  GpaCalculatorView.swift
 //  KBTU Mobile
 //
-//  Created by Olzhas Seilkhanov on 23.04.2023.
+//  Created by Karina Abubakirova on 23.04.2023.
 //
 
 import SwiftUI

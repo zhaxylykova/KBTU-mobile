@@ -14,8 +14,6 @@
 		AC01676529E85C5B008C5ED6 /* FAQView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC01676329E85C5B008C5ED6 /* FAQView.swift */; };
 		AC01676929E85C95008C5ED6 /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC01676729E85C95008C5ED6 /* InfoView.swift */; };
 		AC01676A29E85C95008C5ED6 /* ScholarshipsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC01676829E85C95008C5ED6 /* ScholarshipsView.swift */; };
-		AC01676E29E85E7D008C5ED6 /* AskTheRectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC01676C29E85E7D008C5ED6 /* AskTheRectorView.swift */; };
-		AC01676F29E85E7D008C5ED6 /* AskRectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC01676D29E85E7D008C5ED6 /* AskRectorView.swift */; };
 		AC01677229E85EFC008C5ED6 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC01677129E85EFC008C5ED6 /* SettingsView.swift */; };
 		AC01677529E85F22008C5ED6 /* PsyConsultationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC01677429E85F22008C5ED6 /* PsyConsultationView.swift */; };
 		AC03490A29C9AB1C00CB5714 /* FloorDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC03490929C9AB1C00CB5714 /* FloorDataModel.swift */; };
@@ -108,6 +106,7 @@
 		ACB1E9D529E98358004EA30B /* FirestoreDataModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB1E9D429E98358004EA30B /* FirestoreDataModelProtocol.swift */; };
 		ACB1E9D729E9854D004EA30B /* FirebaseStorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB1E9D629E9854D004EA30B /* FirebaseStorageService.swift */; };
 		ACC0E7F229F2CEC400B47582 /* FirestoreServiceNew.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC0E7F129F2CEC400B47582 /* FirestoreServiceNew.swift */; };
+		ACD20A092A1F17850091E27D /* AskRectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD20A082A1F17850091E27D /* AskRectorView.swift */; };
 		ACEB020129A23C380078218F /* ProfileFillViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEB020029A23C380078218F /* ProfileFillViewController.swift */; };
 		ACEB020429A245AC0078218F /* TextFieldFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEB020329A245AC0078218F /* TextFieldFactory.swift */; };
 		ACEB020629A271390078218F /* ProfileFillViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEB020529A271390078218F /* ProfileFillViewModel.swift */; };
@@ -126,8 +125,6 @@
 		AC01676329E85C5B008C5ED6 /* FAQView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FAQView.swift; sourceTree = "<group>"; };
 		AC01676729E85C95008C5ED6 /* InfoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
 		AC01676829E85C95008C5ED6 /* ScholarshipsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScholarshipsView.swift; sourceTree = "<group>"; };
-		AC01676C29E85E7D008C5ED6 /* AskTheRectorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AskTheRectorView.swift; sourceTree = "<group>"; };
-		AC01676D29E85E7D008C5ED6 /* AskRectorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AskRectorView.swift; sourceTree = "<group>"; };
 		AC01677129E85EFC008C5ED6 /* SettingsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		AC01677429E85F22008C5ED6 /* PsyConsultationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PsyConsultationView.swift; sourceTree = "<group>"; };
 		AC03490929C9AB1C00CB5714 /* FloorDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloorDataModel.swift; sourceTree = "<group>"; };
@@ -225,6 +222,7 @@
 		ACB1E9D429E98358004EA30B /* FirestoreDataModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreDataModelProtocol.swift; sourceTree = "<group>"; };
 		ACB1E9D629E9854D004EA30B /* FirebaseStorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseStorageService.swift; sourceTree = "<group>"; };
 		ACC0E7F129F2CEC400B47582 /* FirestoreServiceNew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreServiceNew.swift; sourceTree = "<group>"; };
+		ACD20A082A1F17850091E27D /* AskRectorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AskRectorView.swift; sourceTree = "<group>"; };
 		ACEB020029A23C380078218F /* ProfileFillViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileFillViewController.swift; sourceTree = "<group>"; };
 		ACEB020329A245AC0078218F /* TextFieldFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldFactory.swift; sourceTree = "<group>"; };
 		ACEB020529A271390078218F /* ProfileFillViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileFillViewModel.swift; sourceTree = "<group>"; };
@@ -284,8 +282,7 @@
 		AC01676B29E85E7D008C5ED6 /* AskRector */ = {
 			isa = PBXGroup;
 			children = (
-				AC01676C29E85E7D008C5ED6 /* AskTheRectorView.swift */,
-				AC01676D29E85E7D008C5ED6 /* AskRectorView.swift */,
+				ACD20A082A1F17850091E27D /* AskRectorView.swift */,
 				ACF0813129F82844001F8AAA /* AskRectorViewModel.swift */,
 			);
 			path = AskRector;
@@ -947,7 +944,6 @@
 				AC86083F29A7D00400E9B4C8 /* LabelFactory.swift in Sources */,
 				AC3705C229A75EC90081657B /* Coordinatable.swift in Sources */,
 				AC24DC1229AB835A00D7BCF8 /* DocumentsViewModel.swift in Sources */,
-				AC01676E29E85E7D008C5ED6 /* AskTheRectorView.swift in Sources */,
 				AC3705CC29A789AD0081657B /* LocalizationViewProtocols.swift in Sources */,
 				AC01676429E85C5B008C5ED6 /* QAView.swift in Sources */,
 				ACEB021629A284740078218F /* UserDataModel.swift in Sources */,
@@ -980,8 +976,8 @@
 				ACB1E9D329E9203C004EA30B /* ScholarshipsViewModel.swift in Sources */,
 				ACB1E9D529E98358004EA30B /* FirestoreDataModelProtocol.swift in Sources */,
 				ACEB020F29A27FD40078218F /* FirebaseService.swift in Sources */,
-				AC01676F29E85E7D008C5ED6 /* AskRectorView.swift in Sources */,
 				AC29E47229E2FD4700CA4A73 /* NewsItemDataModel.swift in Sources */,
+				ACD20A092A1F17850091E27D /* AskRectorView.swift in Sources */,
 				ACB16F4A29BCAC630001AA59 /* Text.swift in Sources */,
 				ACAAE91F29E6A43300C5308E /* MenuView.swift in Sources */,
 				ACAAE93029E6A4F500C5308E /* ClubsView.swift in Sources */,

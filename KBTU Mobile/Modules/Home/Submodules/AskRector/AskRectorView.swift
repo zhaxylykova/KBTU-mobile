@@ -18,58 +18,68 @@ struct AskRectorView: View {
     private let typesOfAppeal = ["Statement", "Feedback", "Offer"]
 
     var body: some View {
-        VStack(alignment: .leading, spacing: 20) {
-            Text("Ask the Rector")
-                .font(.largeTitle)
-                .fontWeight(.bold)
-            Text("In this section you can address your concerns and recommendations to Rector of KBTU. \nThe answer will be sent to your corporate email.")
-                .foregroundColor(.black)
-                .lineLimit(nil)
-
-            Form {
-                Section {
+        ZStack {
+            Color("backgroundColor")
+                .ignoresSafeArea()
+            ScrollView {
+                Spacer()
+                Text("In this section you can address your concerns and recommendations to Rector of KBTU. \nThe answer will be sent to your corporate email.")
+                    .foregroundColor(.black)
+                    .lineLimit(nil)
+                    .frame(width: 340)
+                VStack {
                     TextField("Topic", text: $subject)
-                        .font(.title)
-                        .padding(.vertical, 8)
-
+                        .font(.title2)
+                        .frame(height: 30)
+                        .padding(10)
+                        .background(Color.white)
+                        .cornerRadius(8)
+                
                     Picker(selection: $typeOfAppeal, label: Text("Type of Appeal")) {
                         ForEach(typesOfAppeal, id: \.self) { type in
                             Text(type).tag(type)
                         }
                     }
-                    .frame(width: 300, height: 50)
-                    .pickerStyle(SegmentedPickerStyle())
+                    .frame(width: 300, height: 100)
+                    .pickerStyle(.wheel)
                     .font(.title)
                     .padding(.vertical, 8)
-                }
-
-                Section(header: Text("Message")) {
+                    if bodyText.isEmpty {
+                        Text("Enter your message")
+                            .foregroundColor(.gray)
+                            .padding(.horizontal, 4)
+                    }
                     TextEditor(text: $bodyText)
                         .font(.title2)
-                        .padding(.vertical, 8)
+                        .padding(8)
+                        .background(.white)
+                        .frame(width: 300, height: 80)
+                        .cornerRadius(8)
                 }
-            }
-            .listRowBackground(Color.white)
-            Button(action: {
-                if !subject.isEmpty && !bodyText.isEmpty {
-                    viewModel.configureAndSendEmail(subject: subject, typeOfAppeal: typeOfAppeal, body: bodyText)
-                } else {
-                    showAlert = true
+                .padding(40)
+                Button(action: {
+                    if !subject.isEmpty && !bodyText.isEmpty {
+                        viewModel.configureAndSendEmail(
+                            subject: subject,
+                            typeOfAppeal: typeOfAppeal,
+                            body: bodyText
+                        )
+                    } else {
+                        showAlert = true
+                    }
+                }) {
+                    Text("send")
+                        .fontWeight(.semibold)
+                        .font(.title)
+                        .padding()
+                        .frame(width: 150)
+                        .background(Color("purpleColor"))
+                        .foregroundColor(Color.black)
+                        .cornerRadius(40)
                 }
-            }) {
-                Text("send")
-                    .fontWeight(.semibold)
-                    .font(.title)
-                    .padding()
-                    .frame(minWidth: 0, maxWidth: .infinity)
-                    .background(Color("purpleColor"))
-                    .foregroundColor(Color.black)
-                    .cornerRadius(40)
             }
         }
-        .padding(20)
-        .navigationBarTitleDisplayMode(.inline)
-        .background(Color("backgroundColor"))
+        .navigationTitle("Ask the Rector")
         .alert(isPresented: $showAlert) {
             Alert(
                 title: Text("Error"),
@@ -103,7 +113,7 @@ struct AskRectorView: View {
     }
 }
 
-struct AskRectorView_Previews: PreviewProvider {
+struct NewRectorView_Previews: PreviewProvider {
     static var previews: some View {
         AskRectorView()
     }

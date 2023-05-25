@@ -13,9 +13,9 @@ struct ClubsView: View {
             VStack(spacing: 20) {
                 HStack(spacing: 20) {
                     ClubsButton(
-                        title: "KBTU\nFACES",
+                        title: "KBTU\nSTUDENT LIFE",
                         color: Color("studentguideColor"),
-                        destination: AnyView(KbtuFacesView())
+                        destination: AnyView(StudentLifeView())
                     )
                     ClubsButton(
                         title: "ART\nHOUSE",
@@ -33,15 +33,15 @@ struct ClubsView: View {
                     ClubsButton(
                         title: "KBTU\nGOV",
                         color: Color("libraryColor"),
-                        destination: AnyView(StudentGuideView())
+                        destination: AnyView(KbtuGovView())
                     )
                 }
                 .frame(height:130)
                 HStack(spacing: 20) {
                     ClubsButton(
-                        title: "KBTU\nSTUDENT LIFE",
+                        title: "KBTU\nFACES",
                         color: Color("gpaColor"),
-                        destination: AnyView(StudentGuideView())
+                        destination: AnyView(KbtuFacesView())
                     )
                     ClubsButton(
                         title: "WOMEN\nEMPOWERMENT",

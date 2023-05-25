@@ -7,9 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3BC0511BCD847F239AEB6F2F /* Pods_KBTU_Mobile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F34E528D88040C11080CF08 /* Pods_KBTU_Mobile.framework */; };
 		4232C41829F5ACFA0004BBED /* KbtuFacesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4232C41729F5ACFA0004BBED /* KbtuFacesViewModel.swift */; };
 		4232C41C29F5AD750004BBED /* KbtuFacesDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4232C41B29F5AD750004BBED /* KbtuFacesDataModel.swift */; };
-		4DDAF1BA8DCD38409E0132D9 /* Pods_KBTU_Mobile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6350E2A2016C8DD8EA3959AB /* Pods_KBTU_Mobile.framework */; };
+		4267AE112A1CD5240095B2FA /* SocialsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4267AE102A1CD5230095B2FA /* SocialsView.swift */; };
+		4267AE132A1D3DCD0095B2FA /* KbtuGovView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4267AE122A1D3DCD0095B2FA /* KbtuGovView.swift */; };
+		4267AE152A1D44050095B2FA /* StudentLifeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4267AE142A1D44040095B2FA /* StudentLifeView.swift */; };
+		4267AE172A1D44620095B2FA /* StudentLifeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4267AE162A1D44620095B2FA /* StudentLifeViewModel.swift */; };
 		AC01676429E85C5B008C5ED6 /* QAView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC01676229E85C5B008C5ED6 /* QAView.swift */; };
 		AC01676529E85C5B008C5ED6 /* FAQView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC01676329E85C5B008C5ED6 /* FAQView.swift */; };
 		AC01676929E85C95008C5ED6 /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC01676729E85C95008C5ED6 /* InfoView.swift */; };
@@ -117,11 +121,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		2FAE1570D24D6878944B2909 /* Pods-KBTU Mobile.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KBTU Mobile.release.xcconfig"; path = "Target Support Files/Pods-KBTU Mobile/Pods-KBTU Mobile.release.xcconfig"; sourceTree = "<group>"; };
 		4232C41729F5ACFA0004BBED /* KbtuFacesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KbtuFacesViewModel.swift; sourceTree = "<group>"; };
 		4232C41B29F5AD750004BBED /* KbtuFacesDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KbtuFacesDataModel.swift; sourceTree = "<group>"; };
-		6350E2A2016C8DD8EA3959AB /* Pods_KBTU_Mobile.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KBTU_Mobile.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		77E775B0AD04E34DB0FD5A13 /* Pods-KBTU Mobile.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KBTU Mobile.debug.xcconfig"; path = "Target Support Files/Pods-KBTU Mobile/Pods-KBTU Mobile.debug.xcconfig"; sourceTree = "<group>"; };
+		4267AE102A1CD5230095B2FA /* SocialsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialsView.swift; sourceTree = "<group>"; };
+		4267AE122A1D3DCD0095B2FA /* KbtuGovView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KbtuGovView.swift; sourceTree = "<group>"; };
+		4267AE142A1D44040095B2FA /* StudentLifeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentLifeView.swift; sourceTree = "<group>"; };
+		4267AE162A1D44620095B2FA /* StudentLifeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentLifeViewModel.swift; sourceTree = "<group>"; };
+		564F68169C9E60A3F3BEA882 /* Pods-KBTU Mobile.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KBTU Mobile.release.xcconfig"; path = "Target Support Files/Pods-KBTU Mobile/Pods-KBTU Mobile.release.xcconfig"; sourceTree = "<group>"; };
+		8F34E528D88040C11080CF08 /* Pods_KBTU_Mobile.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KBTU_Mobile.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC01676229E85C5B008C5ED6 /* QAView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QAView.swift; sourceTree = "<group>"; };
 		AC01676329E85C5B008C5ED6 /* FAQView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FAQView.swift; sourceTree = "<group>"; };
 		AC01676729E85C95008C5ED6 /* InfoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
@@ -231,6 +238,7 @@
 		ACEB020E29A27FD40078218F /* FirebaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseService.swift; sourceTree = "<group>"; };
 		ACEB021529A284740078218F /* UserDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataModel.swift; sourceTree = "<group>"; };
 		ACF0813129F82844001F8AAA /* AskRectorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AskRectorViewModel.swift; sourceTree = "<group>"; };
+		C8EDF4C6A6F91A731AFB711A /* Pods-KBTU Mobile.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KBTU Mobile.debug.xcconfig"; path = "Target Support Files/Pods-KBTU Mobile/Pods-KBTU Mobile.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -238,26 +246,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4DDAF1BA8DCD38409E0132D9 /* Pods_KBTU_Mobile.framework in Frameworks */,
+				3BC0511BCD847F239AEB6F2F /* Pods_KBTU_Mobile.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		27A49362EFFF1FAC77ED5421 /* Frameworks */ = {
+		4267AE0F2A1CD50A0095B2FA /* Socials */ = {
 			isa = PBXGroup;
 			children = (
-				6350E2A2016C8DD8EA3959AB /* Pods_KBTU_Mobile.framework */,
+				4267AE102A1CD5230095B2FA /* SocialsView.swift */,
 			);
-			name = Frameworks;
+			path = Socials;
 			sourceTree = "<group>";
 		};
 		5664FFCF14AEA2F204C75526 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				77E775B0AD04E34DB0FD5A13 /* Pods-KBTU Mobile.debug.xcconfig */,
-				2FAE1570D24D6878944B2909 /* Pods-KBTU Mobile.release.xcconfig */,
+				C8EDF4C6A6F91A731AFB711A /* Pods-KBTU Mobile.debug.xcconfig */,
+				564F68169C9E60A3F3BEA882 /* Pods-KBTU Mobile.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -302,6 +310,7 @@
 		AC01677629E86149008C5ED6 /* Submodules */ = {
 			isa = PBXGroup;
 			children = (
+				4267AE0F2A1CD50A0095B2FA /* Socials */,
 				AC50830929F5113800C49295 /* GPACalculator */,
 				ACAAE92829E6A4F500C5308E /* Academic Mobility */,
 				ACAAE92A29E6A4F500C5308E /* Clubs */,
@@ -560,7 +569,7 @@
 				AC957CDB297F99B20005515F /* KBTU Mobile */,
 				AC29E47029DECFED00CA4A73 /* KBTU Mobile.app */,
 				5664FFCF14AEA2F204C75526 /* Pods */,
-				27A49362EFFF1FAC77ED5421 /* Frameworks */,
+				BAECF908C6DAA3F9BE56D220 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -739,6 +748,9 @@
 				ACAAE92B29E6A4F500C5308E /* ClubsView.swift */,
 				ACAAE92C29E6A4F500C5308E /* KbtuFacesView.swift */,
 				4232C41729F5ACFA0004BBED /* KbtuFacesViewModel.swift */,
+				4267AE122A1D3DCD0095B2FA /* KbtuGovView.swift */,
+				4267AE142A1D44040095B2FA /* StudentLifeView.swift */,
+				4267AE162A1D44620095B2FA /* StudentLifeViewModel.swift */,
 			);
 			path = Clubs;
 			sourceTree = "<group>";
@@ -795,6 +807,14 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		BAECF908C6DAA3F9BE56D220 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8F34E528D88040C11080CF08 /* Pods_KBTU_Mobile.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -802,11 +822,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AC957CED297F99B50005515F /* Build configuration list for PBXNativeTarget "KBTU Mobile" */;
 			buildPhases = (
-				E408E8CAAA41A872D635ACC2 /* [CP] Check Pods Manifest.lock */,
+				8C41506613CFE7CE71DA8E5D /* [CP] Check Pods Manifest.lock */,
 				AC957CD5297F99B20005515F /* Sources */,
 				AC957CD6297F99B20005515F /* Frameworks */,
 				AC957CD7297F99B20005515F /* Resources */,
-				938A7F66FF91DFC8BCE6D293 /* [CP] Embed Pods Frameworks */,
+				7FA3DD9F1B4BFA81BE1163AC /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -886,7 +906,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		938A7F66FF91DFC8BCE6D293 /* [CP] Embed Pods Frameworks */ = {
+		7FA3DD9F1B4BFA81BE1163AC /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -903,7 +923,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-KBTU Mobile/Pods-KBTU Mobile-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		E408E8CAAA41A872D635ACC2 /* [CP] Check Pods Manifest.lock */ = {
+		8C41506613CFE7CE71DA8E5D /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -937,6 +957,7 @@
 				ACAAE92429E6A48F00C5308E /* StudentGuideView.swift in Sources */,
 				AC01676A29E85C95008C5ED6 /* ScholarshipsView.swift in Sources */,
 				AC90854129F45BF30083508C /* DocumentDataModel.swift in Sources */,
+				4267AE112A1CD5240095B2FA /* SocialsView.swift in Sources */,
 				AC24DBF629AB57BB00D7BCF8 /* FirestoreService.swift in Sources */,
 				AC24DC0529AB82FB00D7BCF8 /* HomeViewController.swift in Sources */,
 				ACAAE93329E6A54400C5308E /* OnlineLibraryView.swift in Sources */,
@@ -949,6 +970,7 @@
 				AC24DC1229AB835A00D7BCF8 /* DocumentsViewModel.swift in Sources */,
 				AC01676E29E85E7D008C5ED6 /* AskTheRectorView.swift in Sources */,
 				AC3705CC29A789AD0081657B /* LocalizationViewProtocols.swift in Sources */,
+				4267AE152A1D44050095B2FA /* StudentLifeView.swift in Sources */,
 				AC01676429E85C5B008C5ED6 /* QAView.swift in Sources */,
 				ACEB021629A284740078218F /* UserDataModel.swift in Sources */,
 				AC14614629F9173A0051EA05 /* CarouselItemDataModel.swift in Sources */,
@@ -957,6 +979,7 @@
 				AC3705DB29A7B68D0081657B /* LogInViewProtocols.swift in Sources */,
 				AC3705D929A7B34A0081657B /* BaseCoordinator.swift in Sources */,
 				ACB16A3729F6918C00A020AE /* ImagePickerView.swift in Sources */,
+				4267AE132A1D3DCD0095B2FA /* KbtuGovView.swift in Sources */,
 				AC1B8C2129D9644600906817 /* NewsCardContentView.swift in Sources */,
 				ACAAE93129E6A4F500C5308E /* KbtuFacesView.swift in Sources */,
 				AC24DC1429AB836500D7BCF8 /* ProfileViewModel.swift in Sources */,
@@ -977,6 +1000,7 @@
 				AC957D0229803AC30005515F /* LogInViewModel.swift in Sources */,
 				ACB1E9D129E91D66004EA30B /* ScholarshipDataModel.swift in Sources */,
 				AC3705C429A75EF90081657B /* AppCoordinator.swift in Sources */,
+				4267AE172A1D44620095B2FA /* StudentLifeViewModel.swift in Sources */,
 				ACB1E9D329E9203C004EA30B /* ScholarshipsViewModel.swift in Sources */,
 				ACB1E9D529E98358004EA30B /* FirestoreDataModelProtocol.swift in Sources */,
 				ACEB020F29A27FD40078218F /* FirebaseService.swift in Sources */,
@@ -1160,13 +1184,13 @@
 		};
 		AC957CEE297F99B50005515F /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 77E775B0AD04E34DB0FD5A13 /* Pods-KBTU Mobile.debug.xcconfig */;
+			baseConfigurationReference = C8EDF4C6A6F91A731AFB711A /* Pods-KBTU Mobile.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 53BQTSYPT9;
+				DEVELOPMENT_TEAM = C8C77K56DV;
 				GENERATE_INFOPLIST_FILE = YES;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1220,13 +1244,13 @@
 		};
 		AC957CEF297F99B50005515F /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2FAE1570D24D6878944B2909 /* Pods-KBTU Mobile.release.xcconfig */;
+			baseConfigurationReference = 564F68169C9E60A3F3BEA882 /* Pods-KBTU Mobile.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 53BQTSYPT9;
+				DEVELOPMENT_TEAM = C8C77K56DV;
 				GENERATE_INFOPLIST_FILE = YES;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",

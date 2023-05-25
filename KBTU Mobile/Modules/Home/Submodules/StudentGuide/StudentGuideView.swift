@@ -7,60 +7,6 @@
 
 import SwiftUI
 
-struct StudentGuideView: View {
-    @ObservedObject var viewModel = StudentGuideViewModel(firestoreService: FirestoreServiceNew())
-//    var schools: [School] = [
-//        .init(name: "School of Information Technology and Engineering"),
-//        .init(name: "School of Energy and Petroleum Industry"),
-//        .init(name: "School of Mathematics and Cybernetics"),
-//        .init(name: "School of Geology and Exploration"),
-//        .init(name: "School of Chemical Engineering"),
-//        .init(name: "School of Materials Science and Green Technologies"),
-//        .init(name: "Business School"),
-//        .init(name: "International School of Economics"),
-//        .init(name: "Kazakhstan Maritime Academy")
-//    ]
-//
-//    var others: [Other] = [
-//        .init(name: "Registrar's office"),
-//        .init(name: "Accounting"),
-//        .init(name: "Medical centre"),
-//        .init(name: "Career centre"),
-//        .init(name: "Dormitory"),
-//        .init(name: "Academic Mobility"),
-//        .init(name: "Help Desk"),
-//        .init(name: "Library"),
-//        .init(name: "Psychologist")
-//    ]
-    
-    var body: some View {
-        List {
-            if let schools = viewModel.schools {
-                Section("Schools") {
-                    ForEach(schools, id: \.school) { school in
-                        if school.category == "school" {
-                            NavigationLink(destination: StudentGuideDetails(staff: school.staff ?? [:])) {
-                                Text(school.school ?? "")
-                            }
-                        }
-                    }
-                }
-                Section("Others") {
-                    ForEach(schools, id: \.school) { school in
-                        if school.category == "other" {
-                            NavigationLink(destination: StudentGuideDetails(staff: school.staff ?? [:])) {
-                                Text(school.school ?? "")
-                            }
-                        }
-                    }
-                }
-            } else {
-                ProgressView()
-            }
-        }
-    }
-}
-
 struct StudentGuideDetails: View {
     let staff: [String: Staff]
     
@@ -69,16 +15,22 @@ struct StudentGuideDetails: View {
             .ignoresSafeArea(.all)
             .overlay(
                 ScrollView (showsIndicators: false) {
-                    VStack {
+                    VStack(alignment: .leading) {
                         ForEach(staff.keys.sorted(), id: \.self) { key in
-                            VStack {
+                            VStack(alignment: .leading) {
                                 Text("\(staff[key]!.position ?? "")")
                                     .bold()
+                                    .font(.title2)
+                                    .foregroundColor(.primary)
                                 Text("\(staff[key]!.name ?? "") ")
+                                    .font(.title3)
                                 + Text("\(staff[key]!.email ?? "")")
                                     .underline()
+                                    .font(.title3)
+                                    .foregroundColor(.blue)
                                 if let phone = staff[key]!.phone {
                                     Text("\(phone)")
+                                        .font(.title3)
                                 }
                             }
                             .padding(12)
@@ -86,5 +38,39 @@ struct StudentGuideDetails: View {
                     }
                 }
             )
+    }
+}
+struct StudentGuideView: View {
+    @ObservedObject var viewModel = StudentGuideViewModel(firestoreService: FirestoreServiceNew())
+    
+    var body: some View {
+        let schools = viewModel.schools?.filter { $0.category == "school" } ?? []
+        let others = viewModel.schools?.filter { $0.category == "other" } ?? []
+        
+        List {
+            if !schools.isEmpty {
+                Section("Schools") {
+                    ForEach(schools, id: \.school) { school in
+                        NavigationLink(destination: StudentGuideDetails(staff: school.staff ?? [:])) {
+                            Text(school.school ?? "")
+                        }
+                    }
+                }
+            }
+            
+            if !others.isEmpty {
+                Section("Others") {
+                    ForEach(others, id: \.school) { school in
+                        NavigationLink(destination: StudentGuideDetails(staff: school.staff ?? [:])) {
+                            Text(school.school ?? "")
+                        }
+                    }
+                }
+            }
+            
+            if viewModel.schools == nil {
+                ProgressView()
+            }
+        }
     }
 }

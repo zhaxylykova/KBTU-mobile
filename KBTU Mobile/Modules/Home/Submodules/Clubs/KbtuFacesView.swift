@@ -8,9 +8,9 @@
 import SwiftUI
 
 struct KbtuFacesView: View {
-    @ObservedObject var viewModel = KbtuFacesViewModel(firestoreService: FirestoreServiceNew())
-    @State private var showErrorAlert = false
-//    let contacts: [String: Contacts]
+//    @ObservedObject var viewModel = KbtuFacesViewModel(firestoreService: FirestoreServiceNew())
+//    @State private var showErrorAlert = false
+
 
     var body: some View {
         ScrollView(showsIndicators: false) {
@@ -18,33 +18,33 @@ struct KbtuFacesView: View {
                 Text("Upcoming events:")
                     .font(.title2)
                     .fontWeight(.bold)
-                if let kbtufaces = viewModel.kbtufaces?.first{
-                    Text(kbtufaces.title)
-                        .font(.headline)
-                        .multilineTextAlignment(.center)
-                        //.padding()
-                    Text(kbtufaces.subtitle1)
-                        .font(.body)
-                        //.padding()
-                    Text(kbtufaces.subtitle2)
-                        .font(.body)
-                        //.padding()
-                    Text(kbtufaces.subtitle3)
-                        .font(.body)
-                        .fontWeight(.semibold)
-                    if let contacts = kbtufaces.contacts {
-                        ForEach(contacts.keys.sorted(), id: \.self) { key in
-                            VStack(alignment: .leading) {
-                                Text("\(contacts[key]!.name ?? "") ")
-                                + Text("\(contacts[key]!.phone ?? "")")
-                                    .underline()
-                                Text("\(contacts[key]!.instagram ?? "")")
-                                    .bold()
-                            }
-                            .padding(12)
-                        }
-                    }
-                }
+//                if let kbtufaces = viewModel.kbtufaces?.first{
+//                    Text(kbtufaces.title)
+//                        .font(.headline)
+//                        .multilineTextAlignment(.center)
+//                        //.padding()
+//                    Text(kbtufaces.subtitle1)
+//                        .font(.body)
+//                        //.padding()
+//                    Text(kbtufaces.subtitle2)
+//                        .font(.body)
+//                        //.padding()
+//                    Text(kbtufaces.subtitle3)
+//                        .font(.body)
+//                        .fontWeight(.semibold)
+//                    if let contacts = kbtufaces.contacts {
+//                        ForEach(contacts.keys.sorted(), id: \.self) { key in
+//                            VStack(alignment: .leading) {
+//                                Text("\(contacts[key]!.name ?? "") ")
+//                                + Text("\(contacts[key]!.phone ?? "")")
+//                                    .underline()
+//                                Text("\(contacts[key]!.instagram ?? "")")
+//                                    .bold()
+//                            }
+//                            .padding(12)
+//                        }
+//                    }
+//                }
                 if let url = URL(string: "https://instagram.com/faces_kbtu?igshid=YmMyMTA2M2Y=") {
                     HStack  {
                         Link(destination: url) {
@@ -77,18 +77,18 @@ struct KbtuFacesView: View {
         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
         .background(Color("backgroundColor"))
         .navigationTitle("KBTU FACES")
-        .onAppear { viewModel.fetchKbtuFaces() }
-        .onChange(of: viewModel.errorMessage) { errorMessage in
-            if errorMessage != nil {
-                showErrorAlert = true
-            }
-        }
-        .alert(isPresented: $showErrorAlert) {
-            Alert(
-                title: Text("Error fetching data"),
-                message: Text(viewModel.errorMessage ?? "Unknown error"),
-                dismissButton: .default(Text("OK"))
-            )
-        }
+//        .onAppear { viewModel.fetchKbtuFaces() }
+//        .onChange(of: viewModel.errorMessage) { errorMessage in
+//            if errorMessage != nil {
+//                showErrorAlert = true
+//            }
+//        }
+//        .alert(isPresented: $showErrorAlert) {
+//            Alert(
+//                title: Text("Error fetching data"),
+//                message: Text(viewModel.errorMessage ?? "Unknown error"),
+//                dismissButton: .default(Text("OK"))
+//            )
+//        }
     }
 }

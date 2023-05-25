@@ -14,7 +14,7 @@ struct MobilityView: View {
         ScrollView {
             if let items = viewModel.mobilityData {
                 VStack(spacing: 0) {
-                    Text("The possibility of sending students to study at partner universities is carried out at the expense of:")
+                    Text("The possibility of sending students to study at partner universities for academic mobility depends on the results of the competition for academic mobility, available places at the partner university, and is carried out at the expense of:")
                         .padding(.horizontal)
                         .multilineTextAlignment(.leading)
                         .font(.body)

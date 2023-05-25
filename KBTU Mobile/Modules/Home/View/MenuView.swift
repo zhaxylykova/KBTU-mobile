@@ -93,10 +93,10 @@ struct MenuView: View {
                     VStack (spacing: 20) {
                         
                         CellButton(
-                            title: "Documents",
-                            subtitle: "Working curriculum, academic calendar and other",
+                            title: "Socials",
+                            subtitle: "Follow social networks of KBTU",
                             color: Color("testColor"),
-                            destination: AnyView(DocumentsView())
+                            destination: AnyView(SocialsView())
                         )
                         
                         CellButton(

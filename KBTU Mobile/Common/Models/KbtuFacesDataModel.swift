@@ -8,10 +8,10 @@
 import Foundation
 
 struct KbtuFacesDataModel: Codable {
-    let title: String
-    let subtitle1: String
-    let subtitle2: String
-    let subtitle3: String
+//    let title: String
+//    let subtitle1: String
+//    let subtitle2: String
+//    let subtitle3: String
     let contacts: [String: Contacts]?
     
 //    init?(data: [String: Any]) {
@@ -31,7 +31,9 @@ struct KbtuFacesDataModel: Codable {
 }
 
 struct Contacts: Codable {
+    let position: String?
     let instagram: String?
     let name: String?
     let phone: String?
+    let email: String?
 }

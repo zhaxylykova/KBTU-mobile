@@ -82,6 +82,7 @@ final class MapViewController: UIViewController, MapViewInput {
     
     @objc
     private func didTapGo() {
+        searchTextField.resignFirstResponder()
         guard let roomNumber = searchTextField.text else { return }
         outerLoop: for streetDict in GlobalConstants.rooms.streets {
             for roomDict in streetDict.value.roomsOnFloor {

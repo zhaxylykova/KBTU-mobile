@@ -56,7 +56,7 @@ public class TextFieldFactory {
         var keyboardType: UIKeyboardType = .default
         if title.contains("Email") {
             keyboardType = .emailAddress
-        } else if title.contains("phone") {
+        } else if title.contains("phone") || title.contains("room") {
             keyboardType = .phonePad
         }
         textField.keyboardType = keyboardType

@@ -137,6 +137,7 @@ extension NewsViewController: SwipeCardStackDataSource, SwipeCardStackDelegate {
     }
     
     func cardStack(_ cardStack: SwipeCardStack, didSelectCardAt index: Int) {
+        searchTextField.resignFirstResponder()
         let title = filteredNews[index].title
         let description = filteredNews[index].description
         let date = filteredNews[index].date

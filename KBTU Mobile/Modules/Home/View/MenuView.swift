@@ -95,14 +95,14 @@ struct MenuView: View {
                         CellButton(
                             title: "Socials",
                             subtitle: "Follow social networks of KBTU",
-                            color: Color("testColor"),
+                            color: Color("libraryColor"),
                             destination: AnyView(SocialsView())
                         )
                         
                         CellButton(
                             title: "Academic Mobility",
                             subtitle: "Yeah",
-                            color: Color("mobilityColor"),
+                            color: Color("gpaColor"),
                             destination: AnyView(MobilityView())
                         )
                         

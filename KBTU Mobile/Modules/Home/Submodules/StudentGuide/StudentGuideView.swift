@@ -12,6 +12,7 @@ struct StudentGuideDetails: View {
     
     var body: some View {
         Color("backgroundColor")
+//        .background(Color("backgroundcolor"))
             .ignoresSafeArea(.all)
             .overlay(
                 ScrollView (showsIndicators: false) {
@@ -37,6 +38,7 @@ struct StudentGuideDetails: View {
                         }
                     }
                 }
+                    .background(Color("backgroundcolor"))
             )
     }
 }

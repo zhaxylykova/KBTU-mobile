@@ -8,7 +8,7 @@
 
 // MARK: - GetStarted Screen
 "Welcome to KBTU Mobile" = "Welcome to KBTU Mobile";
-"Placeholder Paragraph" = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris cras nunc, a phasellus erat. Curabitur sit in arcu, imperdiet integer id. Enim diam.";
+"Placeholder Paragraph" = "KBTU Mobile is an application created for KBTU students, primarily bachelor’s degree students, which will cover needs by providing different functionalities and information related to the academic process and student life. Hope it will improve your student life. Good luck! :)";
 "Get Started" = "Get Started";
 
 // MARK: - Login Screen

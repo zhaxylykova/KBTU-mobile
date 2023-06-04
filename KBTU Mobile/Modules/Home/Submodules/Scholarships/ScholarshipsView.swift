@@ -10,65 +10,92 @@ import SwiftUI
 struct ScholarshipsView: View {
     @ObservedObject var viewModel = ScholarshipsViewModel(firestoreService: FirestoreService<ScholarshipDataModel>())
     @State private var showErrorAlert = false
-    
-    private let gridItems = [GridItem(.adaptive(minimum: 170, maximum: 360))]
-    
+
     var body: some View {
-        Color("backgroundColor")
+    Color("backgroundColor")
             .ignoresSafeArea(.all)
             .overlay(
-                ScrollView {
-                    LazyVGrid(columns: gridItems, spacing: 20) {
-                        ForEach(viewModel.scholarships ?? []) { scholarship in
-                            NavigationLink(destination: InfoView(scholarship: scholarship)) {
-                                ScholarshipCardView(scholarship: scholarship)
+        ScrollView {
+            VStack {
+                if let scholarships = viewModel.scholarships {
+                    ForEach(0..<scholarships.count, id: \.self) { index in
+                        if index % 3 == 0 {
+                            NavigationLink(destination: InfoView(scholarship: scholarships[index])) {
+                                Text(scholarships[index].title ?? "")
+                                    .font(.title)
+                                    .foregroundColor(Color("darkPurple"))
+                                    .padding()
+                                    .frame(width: 360, height: 100)
+                                    .background(Color("purpleColor"))
+                                    .cornerRadius(15)
+                                    .padding(.top,10)
                             }
+                        } else if index % 3 == 1 {
+                            HStack(spacing: 20) {
+                                NavigationLink(destination: InfoView(scholarship: scholarships[index])) {
+                                    Text(scholarships[index].title ?? "")
+                                        .font(.title)
+                                        .foregroundColor(Color("darkPurple"))
+                                        .padding()
+                                        .frame(width: 170, height: 100)
+                                        .background(Color("lightBlue"))
+                                        .cornerRadius(15)
+                                }
+                                if index + 1 < scholarships.count {
+                                    NavigationLink(destination: InfoView(scholarship: scholarships[index + 1])) {
+                                        Text(scholarships[index + 1].title ?? "")
+                                            .font(.title)
+                                            .foregroundColor(Color("darkPurple"))
+                                            .padding()
+                                            .frame(width: 170, height: 100)
+                                            .background(Color("clubsColor"))
+                                            .cornerRadius(15)
+                                    }
+                                }
+                            }
+                            .frame(height: 80)
+                            .padding(12)
                         }
                     }
-                    .padding()
+                } else {
+                    ProgressView("Loading...")
                 }
-                .navigationBarTitle("Scholarships")
-                .onAppear { viewModel.fetchScholarships() }
-                .onChange(of: viewModel.errorMessage) { errorMessage in
-                    if errorMessage != nil {
-                        showErrorAlert = true
-                    }
-                }
-                .alert(isPresented: $showErrorAlert) {
-                    Alert(
-                        title: Text("Error fetching data"),
-                        message: Text(viewModel.errorMessage ?? "Unknown error"),
-                        dismissButton: .default(Text("OK"))
-                    )
-                }
+            }
+        }
+        .padding()
+        .navigationBarTitle("Scholarships")
+        .onAppear { viewModel.fetchScholarships() }
+        .onChange(of: viewModel.errorMessage) { errorMessage in
+            if errorMessage != nil {
+                showErrorAlert = true
+            }
+        }
+        .alert(isPresented: $showErrorAlert) {
+            Alert(
+                title: Text("Error fetching data"),
+                message: Text(viewModel.errorMessage ?? "Unknown error"),
+                dismissButton: .default(Text("OK"))
             )
+        })
     }
 }
 
-struct ScholarshipCardView: View {
-    let scholarship: ScholarshipDataModel
-    let colors = [Color("lightBlue"), Color("clubsColor"), Color("Green"), Color("purpleColor")]
-    
-    var body: some View {
-        VStack {
-            Text(scholarship.title ?? "")
-                .font(.title)
-                .foregroundColor(Color("darkPurple"))
-                .padding()
-                .frame(height: 100)
-                .background(scholarshipBackgroundColor)
-                .cornerRadius(15)
+struct SecondView: View {
+    let color: Color
+
+    var body: some View{
+        ZStack{
+            color.edgesIgnoringSafeArea(.all)
+            Text("Scholarships from KAZENERGY")
+                .font(.system(size:30, weight: .bold))
+                .multilineTextAlignment(.center)
+                .frame(width: 200, height: 100, alignment: .center)
         }
     }
-    
-    private var scholarshipBackgroundColor: Color {
-            let randomIndex = Int.random(in: 0..<colors.count)
-            return colors[randomIndex]
-        }
 }
 
 struct ScholarshipsView_Previews: PreviewProvider {
     static var previews: some View {
-        ScholarshipsView()
+        StudentGuideView()
     }
 }

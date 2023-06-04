@@ -17,6 +17,9 @@ struct KbtuGovView: View {
                 Text("Student Government – student’s self-management system that takes place at KBTU. They coordinate ministers of each area (Culture, Science, Sports, Social Development), presidents of faculties and activists (Student Angels).")
                     .font(.body)
                     .multilineTextAlignment(.leading)
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    .padding()
+                    .background(Color("lightpurpleColor"))
                 if let kbtufaces = viewModel.kbtufaces?.first{
                     if let contacts = kbtufaces.contacts {
                         ForEach(contacts.keys.sorted(), id: \.self) { key in
@@ -49,27 +52,7 @@ struct KbtuGovView: View {
                     }
                 }
                 VStack(alignment: .center) {
-                    if let url = URL(string: "https://www.instagram.com/kbtu_gov/") {
-                        HStack(alignment: .center)  {
-                            Link(destination: url) {
-                                HStack(alignment: .center) {
-                                    Text("our instagram")
-                                        .fontWeight(.semibold)
-                                        .foregroundColor(.black)
-                                        .font(.system(size: 18))
-                                }
-                                .padding(.horizontal, 20)
-                                .padding(.vertical, 10)
-                                .background(
-                                    Capsule()
-                                        .fill(Color("purpleColor"))
-                                )
-                                .shadow(color: .gray, radius: 2, x: 0, y: 2)
-                            }
-                        }
-                    } else {
-                        ProgressView("Loading...")
-                    }
+                    InstagramButtonView(url: URL(string: "https://www.instagram.com/kbtu_gov/"))
                 }
             }
             .padding()

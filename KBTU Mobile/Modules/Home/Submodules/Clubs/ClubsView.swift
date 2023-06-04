@@ -20,7 +20,7 @@ struct ClubsView: View {
                     ClubsButton(
                         title: "ART\nHOUSE",
                         color: Color("clubsColor"),
-                        destination: AnyView(StudentGuideView())
+                        destination: AnyView(ArthouseView())
                     )
                 }
                 .frame(height:130)
@@ -28,7 +28,7 @@ struct ClubsView: View {
                     ClubsButton(
                         title: "BIG CITY\nLIGHTS",
                         color: Color("faqColor"),
-                        destination: AnyView(StudentGuideView())
+                        destination: AnyView(BigCityLightsView())
                     )
                     ClubsButton(
                         title: "KBTU\nGOV",
@@ -44,9 +44,9 @@ struct ClubsView: View {
                         destination: AnyView(KbtuFacesView())
                     )
                     ClubsButton(
-                        title: "WOMEN\nEMPOWERMENT",
+                        title: "CRYSTAL\nKBTU",
                         color: Color("psychologyColor"),
-                        destination: AnyView(StudentGuideView())
+                        destination: AnyView(CrystalView())
                     )
                 }
                 .frame(height:130)
@@ -54,12 +54,12 @@ struct ClubsView: View {
                     ClubsButton(
                         title: "ALIVE\nSTUDENTS",
                         color: Color("scholarshipsColor"),
-                        destination: AnyView(StudentGuideView())
+                        destination: AnyView(AliveStudentsView())
                     )
                     ClubsButton(
                         title: "KBTU\nSTARTUP",
                         color: Color("schoolsColor"),
-                        destination: AnyView(StudentGuideView())
+                        destination: AnyView(StartupView())
                     )
                 }
                 .frame(height:130)

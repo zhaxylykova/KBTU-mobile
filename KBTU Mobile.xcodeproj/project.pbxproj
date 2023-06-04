@@ -52,7 +52,6 @@
 		AC24DC0329AB82DD00D7BCF8 /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC24DC0229AB82DD00D7BCF8 /* NewsViewController.swift */; };
 		AC24DC0529AB82FB00D7BCF8 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC24DC0429AB82FB00D7BCF8 /* HomeViewController.swift */; };
 		AC24DC0729AB830D00D7BCF8 /* NewsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC24DC0629AB830D00D7BCF8 /* NewsViewModel.swift */; };
-		AC24DC0C29AB833B00D7BCF8 /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC24DC0B29AB833B00D7BCF8 /* MapViewModel.swift */; };
 		AC24DC0E29AB834900D7BCF8 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC24DC0D29AB834900D7BCF8 /* MapViewController.swift */; };
 		AC24DC1029AB835300D7BCF8 /* DocumentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC24DC0F29AB835300D7BCF8 /* DocumentsViewController.swift */; };
 		AC24DC1229AB835A00D7BCF8 /* DocumentsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC24DC1129AB835A00D7BCF8 /* DocumentsViewModel.swift */; };
@@ -60,7 +59,6 @@
 		AC24DC1629AB837400D7BCF8 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC24DC1529AB837400D7BCF8 /* ProfileViewController.swift */; };
 		AC24DC2129AB844000D7BCF8 /* HomeViewProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC24DC2029AB844000D7BCF8 /* HomeViewProtocols.swift */; };
 		AC24DC2329AB844E00D7BCF8 /* NewsViewProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC24DC2229AB844E00D7BCF8 /* NewsViewProtocols.swift */; };
-		AC24DC2529AB845C00D7BCF8 /* MapViewProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC24DC2429AB845C00D7BCF8 /* MapViewProtocols.swift */; };
 		AC24DC2729AB846B00D7BCF8 /* DocumentsViewProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC24DC2629AB846B00D7BCF8 /* DocumentsViewProtocols.swift */; };
 		AC24DC2929AB847800D7BCF8 /* ProfileViewProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC24DC2829AB847800D7BCF8 /* ProfileViewProtocols.swift */; };
 		AC29E47229E2FD4700CA4A73 /* NewsItemDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC29E47129E2FD4700CA4A73 /* NewsItemDataModel.swift */; };
@@ -166,7 +164,6 @@
 		AC24DC0229AB82DD00D7BCF8 /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
 		AC24DC0429AB82FB00D7BCF8 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		AC24DC0629AB830D00D7BCF8 /* NewsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewModel.swift; sourceTree = "<group>"; };
-		AC24DC0B29AB833B00D7BCF8 /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
 		AC24DC0D29AB834900D7BCF8 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		AC24DC0F29AB835300D7BCF8 /* DocumentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentsViewController.swift; sourceTree = "<group>"; };
 		AC24DC1129AB835A00D7BCF8 /* DocumentsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentsViewModel.swift; sourceTree = "<group>"; };
@@ -174,7 +171,6 @@
 		AC24DC1529AB837400D7BCF8 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		AC24DC2029AB844000D7BCF8 /* HomeViewProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewProtocols.swift; sourceTree = "<group>"; };
 		AC24DC2229AB844E00D7BCF8 /* NewsViewProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewProtocols.swift; sourceTree = "<group>"; };
-		AC24DC2429AB845C00D7BCF8 /* MapViewProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewProtocols.swift; sourceTree = "<group>"; };
 		AC24DC2629AB846B00D7BCF8 /* DocumentsViewProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentsViewProtocols.swift; sourceTree = "<group>"; };
 		AC24DC2829AB847800D7BCF8 /* ProfileViewProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewProtocols.swift; sourceTree = "<group>"; };
 		AC29E47029DECFED00CA4A73 /* KBTU Mobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "KBTU Mobile.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -453,23 +449,13 @@
 			isa = PBXGroup;
 			children = (
 				AC24DC1B29AB839500D7BCF8 /* View */,
-				AC24DC1A29AB838C00D7BCF8 /* ViewModel */,
 			);
 			path = Map;
-			sourceTree = "<group>";
-		};
-		AC24DC1A29AB838C00D7BCF8 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				AC24DC0B29AB833B00D7BCF8 /* MapViewModel.swift */,
-			);
-			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		AC24DC1B29AB839500D7BCF8 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				AC24DC2429AB845C00D7BCF8 /* MapViewProtocols.swift */,
 				AC24DC0D29AB834900D7BCF8 /* MapViewController.swift */,
 			);
 			path = View;
@@ -979,7 +965,6 @@
 				AC1B8C2129D9644600906817 /* NewsCardContentView.swift in Sources */,
 				ACAAE93129E6A4F500C5308E /* KbtuFacesView.swift in Sources */,
 				AC24DC1429AB836500D7BCF8 /* ProfileViewModel.swift in Sources */,
-				AC24DC2529AB845C00D7BCF8 /* MapViewProtocols.swift in Sources */,
 				ACAB3CEC29E5CED3003E4933 /* ProfileView.swift in Sources */,
 				AC957CF82980352E0005515F /* LocalizationViewModel.swift in Sources */,
 				AC957CE1297F99B20005515F /* LocalizationViewController.swift in Sources */,
@@ -1031,7 +1016,6 @@
 				AC24DC2129AB844000D7BCF8 /* HomeViewProtocols.swift in Sources */,
 				AC24DBF929AB812500D7BCF8 /* TabBarViewController.swift in Sources */,
 				ACAAE92F29E6A4F500C5308E /* MobilityView.swift in Sources */,
-				AC24DC0C29AB833B00D7BCF8 /* MapViewModel.swift in Sources */,
 				AC01677529E85F22008C5ED6 /* PsyConsultationView.swift in Sources */,
 				AC01676529E85C5B008C5ED6 /* FAQView.swift in Sources */,
 				AC29E47429E3072000CA4A73 /* NewsDetailsViewController.swift in Sources */,

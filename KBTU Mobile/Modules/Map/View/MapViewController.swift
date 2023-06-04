@@ -7,8 +7,7 @@
 
 import UIKit
 
-final class MapViewController: UIViewController, MapViewInput {
-    var output: MapViewOutput?
+final class MapViewController: UIViewController {
     weak var coordinator: MainCoordinator?
     
     // MARK: UI
@@ -94,7 +93,7 @@ final class MapViewController: UIViewController, MapViewInput {
                         button.sendActions(for: .touchUpInside)
                         break outerLoop
                     } else {
-                        floorLabel.text = " "
+                        floorLabel.text = "No such room"
                         streetLabel.text = " "
                     }
                 }
@@ -156,7 +155,6 @@ final class MapViewController: UIViewController, MapViewInput {
         searchTextField.snp.makeConstraints { make in
             make.width.greaterThanOrEqualTo(200)
         }
-        searchTextField.delegate = self
         
         [searchTextField, goButton].forEach { element in
             searchStackView.addArrangedSubview(element)
@@ -176,13 +174,5 @@ final class MapViewController: UIViewController, MapViewInput {
             }
             floorNumbersStackView.addArrangedSubview(button)
         }
-    }
-}
-
-extension MapViewController: UITextFieldDelegate {
-    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        let allowedCharacters = CharacterSet.decimalDigits
-        let characterSet = CharacterSet(charactersIn: string)
-        return allowedCharacters.isSuperset(of: characterSet)
     }
 }

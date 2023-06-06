@@ -109,6 +109,8 @@
 		ACB1E9D729E9854D004EA30B /* FirebaseStorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB1E9D629E9854D004EA30B /* FirebaseStorageService.swift */; };
 		ACC0E7F229F2CEC400B47582 /* FirestoreServiceNew.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC0E7F129F2CEC400B47582 /* FirestoreServiceNew.swift */; };
 		ACD20A092A1F17850091E27D /* AskRectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD20A082A1F17850091E27D /* AskRectorView.swift */; };
+		ACD63C3B2A2F716A00DD27BC /* FAQViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD63C3A2A2F716A00DD27BC /* FAQViewModel.swift */; };
+		ACD63C3D2A2F729900DD27BC /* FAQDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD63C3C2A2F729900DD27BC /* FAQDataModel.swift */; };
 		ACEB020129A23C380078218F /* ProfileFillViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEB020029A23C380078218F /* ProfileFillViewController.swift */; };
 		ACEB020429A245AC0078218F /* TextFieldFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEB020329A245AC0078218F /* TextFieldFactory.swift */; };
 		ACEB020629A271390078218F /* ProfileFillViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEB020529A271390078218F /* ProfileFillViewModel.swift */; };
@@ -226,6 +228,8 @@
 		ACB1E9D629E9854D004EA30B /* FirebaseStorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseStorageService.swift; sourceTree = "<group>"; };
 		ACC0E7F129F2CEC400B47582 /* FirestoreServiceNew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreServiceNew.swift; sourceTree = "<group>"; };
 		ACD20A082A1F17850091E27D /* AskRectorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AskRectorView.swift; sourceTree = "<group>"; };
+		ACD63C3A2A2F716A00DD27BC /* FAQViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAQViewModel.swift; sourceTree = "<group>"; };
+		ACD63C3C2A2F729900DD27BC /* FAQDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAQDataModel.swift; sourceTree = "<group>"; };
 		ACEB020029A23C380078218F /* ProfileFillViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileFillViewController.swift; sourceTree = "<group>"; };
 		ACEB020329A245AC0078218F /* TextFieldFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldFactory.swift; sourceTree = "<group>"; };
 		ACEB020529A271390078218F /* ProfileFillViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileFillViewModel.swift; sourceTree = "<group>"; };
@@ -269,6 +273,7 @@
 			children = (
 				AC01676229E85C5B008C5ED6 /* QAView.swift */,
 				AC01676329E85C5B008C5ED6 /* FAQView.swift */,
+				ACD63C3A2A2F716A00DD27BC /* FAQViewModel.swift */,
 			);
 			path = FAQ;
 			sourceTree = "<group>";
@@ -786,6 +791,7 @@
 				AC90854029F45BF30083508C /* DocumentDataModel.swift */,
 				4232C41B29F5AD750004BBED /* KbtuFacesDataModel.swift */,
 				AC14614529F9173A0051EA05 /* CarouselItemDataModel.swift */,
+				ACD63C3C2A2F729900DD27BC /* FAQDataModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -949,6 +955,8 @@
 				AC3705D529A7AEE70081657B /* GetStartedViewProtocols.swift in Sources */,
 				ACEB020629A271390078218F /* ProfileFillViewModel.swift in Sources */,
 				AC86083F29A7D00400E9B4C8 /* LabelFactory.swift in Sources */,
+				ACD63C3D2A2F729900DD27BC /* FAQDataModel.swift in Sources */,
+				ACD63C3B2A2F716A00DD27BC /* FAQViewModel.swift in Sources */,
 				AC3705C229A75EC90081657B /* Coordinatable.swift in Sources */,
 				AC24DC1229AB835A00D7BCF8 /* DocumentsViewModel.swift in Sources */,
 				AC3705CC29A789AD0081657B /* LocalizationViewProtocols.swift in Sources */,

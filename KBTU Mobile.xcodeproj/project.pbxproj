@@ -14,6 +14,12 @@
 		4267AE132A1D3DCD0095B2FA /* KbtuGovView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4267AE122A1D3DCD0095B2FA /* KbtuGovView.swift */; };
 		4267AE152A1D44050095B2FA /* StudentLifeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4267AE142A1D44040095B2FA /* StudentLifeView.swift */; };
 		4267AE172A1D44620095B2FA /* StudentLifeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4267AE162A1D44620095B2FA /* StudentLifeViewModel.swift */; };
+		4267AE192A2B24DB0095B2FA /* ArthouseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4267AE182A2B24DA0095B2FA /* ArthouseView.swift */; };
+		4267AE1B2A2B383C0095B2FA /* InstagramButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4267AE1A2A2B383B0095B2FA /* InstagramButtonView.swift */; };
+		4267AE1D2A2B3A2D0095B2FA /* BigCityLightsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4267AE1C2A2B3A2D0095B2FA /* BigCityLightsView.swift */; };
+		4267AE1F2A2BACFD0095B2FA /* CrystalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4267AE1E2A2BACFD0095B2FA /* CrystalView.swift */; };
+		4267AE212A2BC1750095B2FA /* AliveStudentsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4267AE202A2BC1750095B2FA /* AliveStudentsView.swift */; };
+		4267AE232A2BC19C0095B2FA /* StartupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4267AE222A2BC19C0095B2FA /* StartupView.swift */; };
 		AC01676429E85C5B008C5ED6 /* QAView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC01676229E85C5B008C5ED6 /* QAView.swift */; };
 		AC01676529E85C5B008C5ED6 /* FAQView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC01676329E85C5B008C5ED6 /* FAQView.swift */; };
 		AC01676929E85C95008C5ED6 /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC01676729E85C95008C5ED6 /* InfoView.swift */; };
@@ -126,6 +132,12 @@
 		4267AE122A1D3DCD0095B2FA /* KbtuGovView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KbtuGovView.swift; sourceTree = "<group>"; };
 		4267AE142A1D44040095B2FA /* StudentLifeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentLifeView.swift; sourceTree = "<group>"; };
 		4267AE162A1D44620095B2FA /* StudentLifeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentLifeViewModel.swift; sourceTree = "<group>"; };
+		4267AE182A2B24DA0095B2FA /* ArthouseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArthouseView.swift; sourceTree = "<group>"; };
+		4267AE1A2A2B383B0095B2FA /* InstagramButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstagramButtonView.swift; sourceTree = "<group>"; };
+		4267AE1C2A2B3A2D0095B2FA /* BigCityLightsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigCityLightsView.swift; sourceTree = "<group>"; };
+		4267AE1E2A2BACFD0095B2FA /* CrystalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrystalView.swift; sourceTree = "<group>"; };
+		4267AE202A2BC1750095B2FA /* AliveStudentsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AliveStudentsView.swift; sourceTree = "<group>"; };
+		4267AE222A2BC19C0095B2FA /* StartupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartupView.swift; sourceTree = "<group>"; };
 		564F68169C9E60A3F3BEA882 /* Pods-KBTU Mobile.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KBTU Mobile.release.xcconfig"; path = "Target Support Files/Pods-KBTU Mobile/Pods-KBTU Mobile.release.xcconfig"; sourceTree = "<group>"; };
 		8F34E528D88040C11080CF08 /* Pods_KBTU_Mobile.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KBTU_Mobile.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC01676229E85C5B008C5ED6 /* QAView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QAView.swift; sourceTree = "<group>"; };
@@ -734,11 +746,17 @@
 			isa = PBXGroup;
 			children = (
 				ACAAE92B29E6A4F500C5308E /* ClubsView.swift */,
+				4267AE182A2B24DA0095B2FA /* ArthouseView.swift */,
 				ACAAE92C29E6A4F500C5308E /* KbtuFacesView.swift */,
 				4232C41729F5ACFA0004BBED /* KbtuFacesViewModel.swift */,
 				4267AE122A1D3DCD0095B2FA /* KbtuGovView.swift */,
 				4267AE142A1D44040095B2FA /* StudentLifeView.swift */,
 				4267AE162A1D44620095B2FA /* StudentLifeViewModel.swift */,
+				4267AE1A2A2B383B0095B2FA /* InstagramButtonView.swift */,
+				4267AE1C2A2B3A2D0095B2FA /* BigCityLightsView.swift */,
+				4267AE1E2A2BACFD0095B2FA /* CrystalView.swift */,
+				4267AE202A2BC1750095B2FA /* AliveStudentsView.swift */,
+				4267AE222A2BC19C0095B2FA /* StartupView.swift */,
 			);
 			path = Clubs;
 			sourceTree = "<group>";
@@ -941,6 +959,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4267AE192A2B24DB0095B2FA /* ArthouseView.swift in Sources */,
 				AC957D0029803AA00005515F /* LogInViewController.swift in Sources */,
 				AC24DBFD29AB827A00D7BCF8 /* HomeViewModel.swift in Sources */,
 				ACAAE92429E6A48F00C5308E /* StudentGuideView.swift in Sources */,
@@ -961,6 +980,7 @@
 				AC24DC1229AB835A00D7BCF8 /* DocumentsViewModel.swift in Sources */,
 				AC3705CC29A789AD0081657B /* LocalizationViewProtocols.swift in Sources */,
 				4267AE152A1D44050095B2FA /* StudentLifeView.swift in Sources */,
+				4267AE1D2A2B3A2D0095B2FA /* BigCityLightsView.swift in Sources */,
 				AC01676429E85C5B008C5ED6 /* QAView.swift in Sources */,
 				ACEB021629A284740078218F /* UserDataModel.swift in Sources */,
 				AC14614629F9173A0051EA05 /* CarouselItemDataModel.swift in Sources */,
@@ -971,12 +991,14 @@
 				ACB16A3729F6918C00A020AE /* ImagePickerView.swift in Sources */,
 				4267AE132A1D3DCD0095B2FA /* KbtuGovView.swift in Sources */,
 				AC1B8C2129D9644600906817 /* NewsCardContentView.swift in Sources */,
+				4267AE232A2BC19C0095B2FA /* StartupView.swift in Sources */,
 				ACAAE93129E6A4F500C5308E /* KbtuFacesView.swift in Sources */,
 				AC24DC1429AB836500D7BCF8 /* ProfileViewModel.swift in Sources */,
 				ACAB3CEC29E5CED3003E4933 /* ProfileView.swift in Sources */,
 				AC957CF82980352E0005515F /* LocalizationViewModel.swift in Sources */,
 				AC957CE1297F99B20005515F /* LocalizationViewController.swift in Sources */,
 				AC957CDD297F99B20005515F /* AppDelegate.swift in Sources */,
+				4267AE1F2A2BACFD0095B2FA /* CrystalView.swift in Sources */,
 				AC42ADB529B302E60024D6EA /* MenuTextField.swift in Sources */,
 				AC1DFCE029E86957002EB7C6 /* DocumentsView.swift in Sources */,
 				AC24DBF429AB36ED00D7BCF8 /* AlertFactory.swift in Sources */,
@@ -996,8 +1018,10 @@
 				AC29E47229E2FD4700CA4A73 /* NewsItemDataModel.swift in Sources */,
 				ACD20A092A1F17850091E27D /* AskRectorView.swift in Sources */,
 				ACB16F4A29BCAC630001AA59 /* Text.swift in Sources */,
+				4267AE212A2BC1750095B2FA /* AliveStudentsView.swift in Sources */,
 				ACAAE91F29E6A43300C5308E /* MenuView.swift in Sources */,
 				ACAAE93029E6A4F500C5308E /* ClubsView.swift in Sources */,
+				4267AE1B2A2B383C0095B2FA /* InstagramButtonView.swift in Sources */,
 				ACEB020429A245AC0078218F /* TextFieldFactory.swift in Sources */,
 				AC3705DD29A7B91E0081657B /* ProfileFillViewProtocols.swift in Sources */,
 				AC957CF6297FD1820005515F /* ButtonFactory.swift in Sources */,

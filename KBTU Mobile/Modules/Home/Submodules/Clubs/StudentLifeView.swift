@@ -14,8 +14,17 @@ struct StudentLifeView: View {
     var body: some View {
         ScrollView(showsIndicators: false) {
             VStack(alignment: .leading){
+                Text("Department of student affairs provides an opportunity to develop student’s leadership skills and works on brightening up the Student Life. We help students on solving various questions during the study years and coordinate the work of Student Government and Student Organizations.")
+                    .font(.body)
+                    .multilineTextAlignment(.leading)
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    .padding()
+                    .background(Color("lightpurpleColor"))
+                Text("Contacts of managers:")
+                    .font(.title2)
+                    .fontWeight(.semibold)
+                    //.padding()
                 if let studentlife = viewModel.studentlife?.first{
-
                     if let contacts = studentlife.contacts {
                         ForEach(contacts.keys.sorted(), id: \.self) { key in
                             VStack(alignment: .leading) {
@@ -44,26 +53,8 @@ struct StudentLifeView: View {
                         }
                     }
                 }
-                if let url = URL(string: "https://instagram.com/faces_kbtu?igshid=YmMyMTA2M2Y=") {
-                    HStack  {
-                        Link(destination: url) {
-                            HStack {
-                                Text("our instagram")
-                                    .fontWeight(.semibold)
-                                    .foregroundColor(.black)
-                                    .font(.system(size: 18))
-                            }
-                            .padding(.horizontal, 20)
-                            .padding(.vertical, 10)
-                            .background(
-                                Capsule()
-                                    .fill(Color("backgroundColor"))
-                            )
-                            .shadow(color: .gray, radius: 2, x: 0, y: 2)
-                        }
-                    }
-                } else {
-                    ProgressView("Loading...")
+                VStack(alignment: .center) {
+                    InstagramButtonView(url: URL(string: "https://www.instagram.com/kbtu_studentlife/"))
                 }
             }
             .padding()

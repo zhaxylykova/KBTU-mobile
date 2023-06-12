@@ -20,6 +20,7 @@
 		4267AE1F2A2BACFD0095B2FA /* CrystalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4267AE1E2A2BACFD0095B2FA /* CrystalView.swift */; };
 		4267AE212A2BC1750095B2FA /* AliveStudentsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4267AE202A2BC1750095B2FA /* AliveStudentsView.swift */; };
 		4267AE232A2BC19C0095B2FA /* StartupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4267AE222A2BC19C0095B2FA /* StartupView.swift */; };
+		4267AE252A3733CE0095B2FA /* FacultyDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4267AE242A3733CE0095B2FA /* FacultyDataModel.swift */; };
 		AC01676429E85C5B008C5ED6 /* QAView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC01676229E85C5B008C5ED6 /* QAView.swift */; };
 		AC01676529E85C5B008C5ED6 /* FAQView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC01676329E85C5B008C5ED6 /* FAQView.swift */; };
 		AC01676929E85C95008C5ED6 /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC01676729E85C95008C5ED6 /* InfoView.swift */; };
@@ -136,6 +137,7 @@
 		4267AE1E2A2BACFD0095B2FA /* CrystalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrystalView.swift; sourceTree = "<group>"; };
 		4267AE202A2BC1750095B2FA /* AliveStudentsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AliveStudentsView.swift; sourceTree = "<group>"; };
 		4267AE222A2BC19C0095B2FA /* StartupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartupView.swift; sourceTree = "<group>"; };
+		4267AE242A3733CE0095B2FA /* FacultyDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacultyDataModel.swift; sourceTree = "<group>"; };
 		564F68169C9E60A3F3BEA882 /* Pods-KBTU Mobile.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KBTU Mobile.release.xcconfig"; path = "Target Support Files/Pods-KBTU Mobile/Pods-KBTU Mobile.release.xcconfig"; sourceTree = "<group>"; };
 		8F34E528D88040C11080CF08 /* Pods_KBTU_Mobile.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KBTU_Mobile.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC01676229E85C5B008C5ED6 /* QAView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QAView.swift; sourceTree = "<group>"; };
@@ -804,6 +806,7 @@
 				AC90854029F45BF30083508C /* DocumentDataModel.swift */,
 				4232C41B29F5AD750004BBED /* KbtuFacesDataModel.swift */,
 				AC14614529F9173A0051EA05 /* CarouselItemDataModel.swift */,
+				4267AE242A3733CE0095B2FA /* FacultyDataModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -1017,6 +1020,7 @@
 				ACEB020429A245AC0078218F /* TextFieldFactory.swift in Sources */,
 				AC3705DD29A7B91E0081657B /* ProfileFillViewProtocols.swift in Sources */,
 				AC957CF6297FD1820005515F /* ButtonFactory.swift in Sources */,
+				4267AE252A3733CE0095B2FA /* FacultyDataModel.swift in Sources */,
 				AC75060829BC73F80096105D /* GeneralError.swift in Sources */,
 				AC3705CA29A77E510081657B /* MainCoordinator.swift in Sources */,
 				AC24DC2329AB844E00D7BCF8 /* NewsViewProtocols.swift in Sources */,

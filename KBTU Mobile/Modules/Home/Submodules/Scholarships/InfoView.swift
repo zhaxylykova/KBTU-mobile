@@ -34,7 +34,7 @@ struct InfoView: View {
                        label: {
                     HStack{
                         Image(systemName: "plus")
-                        Text("Условия участия в конкурсе для лиц, поступивших и обучающихся в высших учебных заведениях")
+                        Text("Terms of participation in the competition")
                     }
                     .font(.system(size: 20, weight: .semibold))
                     .foregroundColor(.black)
@@ -60,7 +60,7 @@ struct InfoView: View {
                        label: {
                     HStack{
                         Image(systemName: "plus")
-                        Text("Перечень необходимых документов")
+                        Text("List of required documents")
                     }
                     .font(.system(size: 20, weight: .semibold))
                     .foregroundColor(.black)
@@ -81,14 +81,14 @@ struct InfoView: View {
                 }
                 Spacer()
                 HStack {
-                    Text("С подробностями о конкурсном отборе можно найти на: ")
+                    Text("More information: ")
                         .font(.system(size: 20, weight: .regular))
                     + Text(scholarship.source ?? "")
                         .font(.system(size: 20, weight: .regular))
                         .foregroundColor(.blue)
                         .underline()
                 }
-                .frame(width: 340)
+                .frame(width: 320)
                 .onTapGesture {
                     if let url = URL(string: scholarship.source ?? "") {
                         UIApplication.shared.open(url)
@@ -104,3 +104,4 @@ struct InfoView_Previews: PreviewProvider {
         InfoView(scholarship: ScholarshipDataModel(data: [:]))
     }
 }
+

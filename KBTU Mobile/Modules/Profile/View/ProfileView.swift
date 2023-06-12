@@ -67,11 +67,11 @@ struct ProfileView: View {
                                 .fontWeight(.semibold)
                                 .foregroundColor(Color.black)
                                 .padding(30)
-                                .frame(width: 350, height: 60, alignment: .leading)
+                                .frame(width: 320, height: 60, alignment: .leading)
                         }
                         .overlay(
                             RoundedRectangle(cornerRadius: 16)
-                                .stroke(Color("lightPurple"), lineWidth: 4)
+                                .stroke(Color("lightPurple"), lineWidth: 3)
                         )
                         .padding(.bottom, 16)
                         
@@ -300,3 +300,4 @@ struct EditUserView: View {
         }
     }
 }
+

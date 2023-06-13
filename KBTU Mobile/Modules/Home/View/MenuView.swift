@@ -69,7 +69,7 @@ struct MenuView: View {
                         title: "Schools",
                         subtitle: "Maybe you will find out something new",
                         color: Color("schoolsColor"),
-                        destination: AnyView(StudentGuideView())
+                        destination: AnyView(TabBarView())
                     )
                 }
                 .frame(height: 200)
@@ -101,7 +101,7 @@ struct MenuView: View {
                         
                         CellButton(
                             title: "Academic Mobility",
-                            subtitle: "Yeah",
+                            subtitle: "See your options of studying abroad",
                             color: Color("gpaColor"),
                             destination: AnyView(MobilityView())
                         )

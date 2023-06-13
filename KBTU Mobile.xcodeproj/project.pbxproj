@@ -21,6 +21,17 @@
 		4267AE212A2BC1750095B2FA /* AliveStudentsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4267AE202A2BC1750095B2FA /* AliveStudentsView.swift */; };
 		4267AE232A2BC19C0095B2FA /* StartupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4267AE222A2BC19C0095B2FA /* StartupView.swift */; };
 		4267AE252A3733CE0095B2FA /* FacultyDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4267AE242A3733CE0095B2FA /* FacultyDataModel.swift */; };
+		4267AE282A3735240095B2FA /* FacultyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4267AE272A3735240095B2FA /* FacultyViewModel.swift */; };
+		4267AE2A2A3735510095B2FA /* FacultyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4267AE292A3735510095B2FA /* FacultyView.swift */; };
+		4267AE2C2A3735AE0095B2FA /* School2View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4267AE2B2A3735AE0095B2FA /* School2View.swift */; };
+		4267AE2E2A3735CA0095B2FA /* School3View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4267AE2D2A3735CA0095B2FA /* School3View.swift */; };
+		4267AE302A3735FA0095B2FA /* School4View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4267AE2F2A3735FA0095B2FA /* School4View.swift */; };
+		4267AE322A3736180095B2FA /* School5View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4267AE312A3736180095B2FA /* School5View.swift */; };
+		4267AE342A3736480095B2FA /* School6View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4267AE332A3736480095B2FA /* School6View.swift */; };
+		4267AE362A3736740095B2FA /* School7View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4267AE352A3736740095B2FA /* School7View.swift */; };
+		4267AE382A37369F0095B2FA /* School8View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4267AE372A37369F0095B2FA /* School8View.swift */; };
+		4267AE3A2A3736C20095B2FA /* School9View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4267AE392A3736C20095B2FA /* School9View.swift */; };
+		4267AE3C2A3737130095B2FA /* FacultyTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4267AE3B2A3737130095B2FA /* FacultyTabView.swift */; };
 		AC01676429E85C5B008C5ED6 /* QAView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC01676229E85C5B008C5ED6 /* QAView.swift */; };
 		AC01676529E85C5B008C5ED6 /* FAQView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC01676329E85C5B008C5ED6 /* FAQView.swift */; };
 		AC01676929E85C95008C5ED6 /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC01676729E85C95008C5ED6 /* InfoView.swift */; };
@@ -138,6 +149,17 @@
 		4267AE202A2BC1750095B2FA /* AliveStudentsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AliveStudentsView.swift; sourceTree = "<group>"; };
 		4267AE222A2BC19C0095B2FA /* StartupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartupView.swift; sourceTree = "<group>"; };
 		4267AE242A3733CE0095B2FA /* FacultyDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacultyDataModel.swift; sourceTree = "<group>"; };
+		4267AE272A3735240095B2FA /* FacultyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacultyViewModel.swift; sourceTree = "<group>"; };
+		4267AE292A3735510095B2FA /* FacultyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacultyView.swift; sourceTree = "<group>"; };
+		4267AE2B2A3735AE0095B2FA /* School2View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = School2View.swift; sourceTree = "<group>"; };
+		4267AE2D2A3735CA0095B2FA /* School3View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = School3View.swift; sourceTree = "<group>"; };
+		4267AE2F2A3735FA0095B2FA /* School4View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = School4View.swift; sourceTree = "<group>"; };
+		4267AE312A3736180095B2FA /* School5View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = School5View.swift; sourceTree = "<group>"; };
+		4267AE332A3736480095B2FA /* School6View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = School6View.swift; sourceTree = "<group>"; };
+		4267AE352A3736740095B2FA /* School7View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = School7View.swift; sourceTree = "<group>"; };
+		4267AE372A37369F0095B2FA /* School8View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = School8View.swift; sourceTree = "<group>"; };
+		4267AE392A3736C20095B2FA /* School9View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = School9View.swift; sourceTree = "<group>"; };
+		4267AE3B2A3737130095B2FA /* FacultyTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacultyTabView.swift; sourceTree = "<group>"; };
 		564F68169C9E60A3F3BEA882 /* Pods-KBTU Mobile.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KBTU Mobile.release.xcconfig"; path = "Target Support Files/Pods-KBTU Mobile/Pods-KBTU Mobile.release.xcconfig"; sourceTree = "<group>"; };
 		8F34E528D88040C11080CF08 /* Pods_KBTU_Mobile.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KBTU_Mobile.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC01676229E85C5B008C5ED6 /* QAView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QAView.swift; sourceTree = "<group>"; };
@@ -269,6 +291,24 @@
 			path = Socials;
 			sourceTree = "<group>";
 		};
+		4267AE262A3735010095B2FA /* Faculty */ = {
+			isa = PBXGroup;
+			children = (
+				4267AE272A3735240095B2FA /* FacultyViewModel.swift */,
+				4267AE292A3735510095B2FA /* FacultyView.swift */,
+				4267AE2B2A3735AE0095B2FA /* School2View.swift */,
+				4267AE2D2A3735CA0095B2FA /* School3View.swift */,
+				4267AE2F2A3735FA0095B2FA /* School4View.swift */,
+				4267AE312A3736180095B2FA /* School5View.swift */,
+				4267AE332A3736480095B2FA /* School6View.swift */,
+				4267AE352A3736740095B2FA /* School7View.swift */,
+				4267AE372A37369F0095B2FA /* School8View.swift */,
+				4267AE392A3736C20095B2FA /* School9View.swift */,
+				4267AE3B2A3737130095B2FA /* FacultyTabView.swift */,
+			);
+			path = Faculty;
+			sourceTree = "<group>";
+		};
 		5664FFCF14AEA2F204C75526 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -317,6 +357,7 @@
 		AC01677629E86149008C5ED6 /* Submodules */ = {
 			isa = PBXGroup;
 			children = (
+				4267AE262A3735010095B2FA /* Faculty */,
 				4267AE0F2A1CD50A0095B2FA /* Socials */,
 				AC50830929F5113800C49295 /* GPACalculator */,
 				ACAAE92829E6A4F500C5308E /* Academic Mobility */,
@@ -959,6 +1000,7 @@
 				4267AE192A2B24DB0095B2FA /* ArthouseView.swift in Sources */,
 				AC957D0029803AA00005515F /* LogInViewController.swift in Sources */,
 				AC24DBFD29AB827A00D7BCF8 /* HomeViewModel.swift in Sources */,
+				4267AE302A3735FA0095B2FA /* School4View.swift in Sources */,
 				ACAAE92429E6A48F00C5308E /* StudentGuideView.swift in Sources */,
 				AC01676A29E85C95008C5ED6 /* ScholarshipsView.swift in Sources */,
 				AC90854129F45BF30083508C /* DocumentDataModel.swift in Sources */,
@@ -967,6 +1009,7 @@
 				AC24DC0529AB82FB00D7BCF8 /* HomeViewController.swift in Sources */,
 				ACAAE93329E6A54400C5308E /* OnlineLibraryView.swift in Sources */,
 				AC164FF229AF6C2D00B148D5 /* GlobalConstants.swift in Sources */,
+				4267AE3A2A3736C20095B2FA /* School9View.swift in Sources */,
 				ACF0813229F82844001F8AAA /* AskRectorViewModel.swift in Sources */,
 				AC3705D529A7AEE70081657B /* GetStartedViewProtocols.swift in Sources */,
 				ACEB020629A271390078218F /* ProfileFillViewModel.swift in Sources */,
@@ -974,6 +1017,7 @@
 				AC3705C229A75EC90081657B /* Coordinatable.swift in Sources */,
 				AC24DC1229AB835A00D7BCF8 /* DocumentsViewModel.swift in Sources */,
 				AC3705CC29A789AD0081657B /* LocalizationViewProtocols.swift in Sources */,
+				4267AE322A3736180095B2FA /* School5View.swift in Sources */,
 				4267AE152A1D44050095B2FA /* StudentLifeView.swift in Sources */,
 				4267AE1D2A2B3A2D0095B2FA /* BigCityLightsView.swift in Sources */,
 				AC01676429E85C5B008C5ED6 /* QAView.swift in Sources */,
@@ -982,6 +1026,7 @@
 				AC01676929E85C95008C5ED6 /* InfoView.swift in Sources */,
 				AC6BCC4B29F2416200C3A32C /* StudentGuideViewModel.swift in Sources */,
 				AC3705DB29A7B68D0081657B /* LogInViewProtocols.swift in Sources */,
+				4267AE2A2A3735510095B2FA /* FacultyView.swift in Sources */,
 				AC3705D929A7B34A0081657B /* BaseCoordinator.swift in Sources */,
 				ACB16A3729F6918C00A020AE /* ImagePickerView.swift in Sources */,
 				4267AE132A1D3DCD0095B2FA /* KbtuGovView.swift in Sources */,
@@ -1017,6 +1062,7 @@
 				ACAAE91F29E6A43300C5308E /* MenuView.swift in Sources */,
 				ACAAE93029E6A4F500C5308E /* ClubsView.swift in Sources */,
 				4267AE1B2A2B383C0095B2FA /* InstagramButtonView.swift in Sources */,
+				4267AE3C2A3737130095B2FA /* FacultyTabView.swift in Sources */,
 				ACEB020429A245AC0078218F /* TextFieldFactory.swift in Sources */,
 				AC3705DD29A7B91E0081657B /* ProfileFillViewProtocols.swift in Sources */,
 				AC957CF6297FD1820005515F /* ButtonFactory.swift in Sources */,
@@ -1029,24 +1075,30 @@
 				AC24DC0E29AB834900D7BCF8 /* MapViewController.swift in Sources */,
 				AC9D4DB2299D3B8100DC3376 /* GetStartedViewController.swift in Sources */,
 				AC957CDF297F99B20005515F /* SceneDelegate.swift in Sources */,
+				4267AE282A3735240095B2FA /* FacultyViewModel.swift in Sources */,
 				AC24DC0329AB82DD00D7BCF8 /* NewsViewController.swift in Sources */,
 				AC9D4DB0299D3B5900DC3376 /* GetStartedViewModel.swift in Sources */,
 				AC24DC1029AB835300D7BCF8 /* DocumentsViewController.swift in Sources */,
 				AC24DC1629AB837400D7BCF8 /* ProfileViewController.swift in Sources */,
 				AC24DC0729AB830D00D7BCF8 /* NewsViewModel.swift in Sources */,
+				4267AE2E2A3735CA0095B2FA /* School3View.swift in Sources */,
 				AC03490A29C9AB1C00CB5714 /* FloorDataModel.swift in Sources */,
 				ACB1E9D729E9854D004EA30B /* FirebaseStorageService.swift in Sources */,
+				4267AE342A3736480095B2FA /* School6View.swift in Sources */,
+				4267AE362A3736740095B2FA /* School7View.swift in Sources */,
 				AC42ADB829B454BA0024D6EA /* StringExtension.swift in Sources */,
 				AC14614429F8F6EF0051EA05 /* MobilityViewModel.swift in Sources */,
 				AC50830B29F5117F00C49295 /* GpaCalculatorView.swift in Sources */,
 				4232C41829F5ACFA0004BBED /* KbtuFacesViewModel.swift in Sources */,
 				AC3705C629A7733B0081657B /* OnboardingCoordinator.swift in Sources */,
+				4267AE2C2A3735AE0095B2FA /* School2View.swift in Sources */,
 				AC24DC2129AB844000D7BCF8 /* HomeViewProtocols.swift in Sources */,
 				AC24DBF929AB812500D7BCF8 /* TabBarViewController.swift in Sources */,
 				ACAAE92F29E6A4F500C5308E /* MobilityView.swift in Sources */,
 				AC01677529E85F22008C5ED6 /* PsyConsultationView.swift in Sources */,
 				AC01676529E85C5B008C5ED6 /* FAQView.swift in Sources */,
 				AC29E47429E3072000CA4A73 /* NewsDetailsViewController.swift in Sources */,
+				4267AE382A37369F0095B2FA /* School8View.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

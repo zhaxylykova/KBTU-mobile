@@ -30,7 +30,7 @@ struct StudentLifeView: View {
                             VStack(alignment: .leading) {
                                 Text("\(contacts[key]!.position ?? "") ")
                                     .bold()
-                                    .font(.title2)
+                                    .font(.title3)
                                     .foregroundColor(.primary)
                                 Text("\(contacts[key]!.name ?? "") ")
                                     .font(.title3)

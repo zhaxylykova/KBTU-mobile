@@ -42,7 +42,7 @@ struct PsyConsultationView: View {
                             .padding(30)
                             .frame(width: 380, height: 60, alignment: .center)
                                 }
-                Button{if let url = URL(string: "https://kbtu.edu.kz/ru/students/psikholog") {
+                Button{if let url = URL(string: "https://docs.google.com/forms/d/e/1FAIpQLSdeWwZQQUibSwk3ef2nM3NRJKz1kPgziXmr_pxyDWdOMrFCBw/viewform") {
                     UIApplication.shared.open(url, options: [:], completionHandler: nil)
                     }}
                        label: {

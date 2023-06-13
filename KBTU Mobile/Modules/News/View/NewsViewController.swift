@@ -149,6 +149,7 @@ extension NewsViewController: SwipeCardStackDataSource, SwipeCardStackDelegate {
 
 // MARK: - TextField methods
 extension NewsViewController: UITextFieldDelegate {
+    
     func textFieldShouldClear(_ textField: UITextField) -> Bool {
         filteredNews = news
         return true
@@ -173,4 +174,10 @@ extension NewsViewController: UITextFieldDelegate {
         filteredNews = filteredModels
         return true
     }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        searchTextField.resignFirstResponder()
+        return true
+    }
+    
 }

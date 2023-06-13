@@ -11,61 +11,104 @@ struct ScholarshipsView: View {
     @ObservedObject var viewModel = ScholarshipsViewModel(firestoreService: FirestoreService<ScholarshipDataModel>())
     @State private var showErrorAlert = false
     
-    private let gridItems = [GridItem(.adaptive(minimum: 170, maximum: 360))]
-    
     var body: some View {
-        Color("backgroundColor")
-            .ignoresSafeArea(.all)
-            .overlay(
-                ScrollView {
-                    LazyVGrid(columns: gridItems, spacing: 20) {
-                        ForEach(viewModel.scholarships ?? []) { scholarship in
-                            NavigationLink(destination: InfoView(scholarship: scholarship)) {
-                                ScholarshipCardView(scholarship: scholarship)
+        let content: AnyView
+        
+        if let scholarships = viewModel.scholarships {
+            content = AnyView(loadedView(for: scholarships))
+        } else {
+            content = AnyView(loadingView())
+        }
+        
+        return content
+            .padding()
+            .navigationBarTitle("Scholarships")
+            .onAppear { viewModel.fetchScholarships() }
+            .onChange(of: viewModel.errorMessage) { errorMessage in
+                if errorMessage != nil {
+                    showErrorAlert = true
+                }
+            }
+            .alert(isPresented: $showErrorAlert) {
+                Alert(
+                    title: Text("Error fetching data"),
+                    message: Text(viewModel.errorMessage ?? "Unknown error"),
+                    dismissButton: .default(Text("OK"))
+                )
+            }
+    }
+    
+    func loadedView(for scholarships: [ScholarshipDataModel]) -> some View {
+        ScrollView {
+            VStack {
+                ForEach(scholarships.indices, id: \.self) { index in
+                    if index % 3 == 0 {
+                        NavigationLink(destination: InfoView(scholarship: scholarships[index])) {
+                            ScholarshipTileView(scholarship: scholarships[index], tileWidth: 360)
+                        }
+                    } else if index % 3 == 1 {
+                        HStack(spacing: 20) {
+                            NavigationLink(destination: InfoView(scholarship: scholarships[index])) {
+                                ScholarshipTileView(scholarship: scholarships[index], tileWidth: 170)
+                            }
+                            if index + 1 < scholarships.count {
+                                NavigationLink(destination: InfoView(scholarship: scholarships[index + 1])) {
+                                    ScholarshipTileView(scholarship: scholarships[index + 1], tileWidth: 170)
+                                }
                             }
                         }
-                    }
-                    .padding()
-                }
-                .navigationBarTitle("Scholarships")
-                .onAppear { viewModel.fetchScholarships() }
-                .onChange(of: viewModel.errorMessage) { errorMessage in
-                    if errorMessage != nil {
-                        showErrorAlert = true
+                        .frame(height: 80)
+                        .padding(12)
                     }
                 }
-                .alert(isPresented: $showErrorAlert) {
-                    Alert(
-                        title: Text("Error fetching data"),
-                        message: Text(viewModel.errorMessage ?? "Unknown error"),
-                        dismissButton: .default(Text("OK"))
-                    )
-                }
-            )
+            }
+        }
+    }
+    
+    func loadingView() -> some View {
+        ProgressView("Loading...")
     }
 }
 
-struct ScholarshipCardView: View {
+struct ScholarshipTileView: View {
     let scholarship: ScholarshipDataModel
-    let colors = [Color("lightBlue"), Color("clubsColor"), Color("Green"), Color("purpleColor")]
+    let tileWidth: CGFloat
     
     var body: some View {
-        VStack {
-            Text(scholarship.title ?? "")
-                .font(.title)
-                .foregroundColor(Color("darkPurple"))
-                .padding()
-                .frame(height: 100)
-                .background(scholarshipBackgroundColor)
-                .cornerRadius(15)
-        }
+        Text(scholarship.title ?? "")
+            .font(.title)
+            .foregroundColor(Color("darkPurple"))
+            .padding()
+            .frame(width: tileWidth, height: 100)
+            .background(tileColor(for: tileWidth))
+            .cornerRadius(15)
+            .padding(.top, 10)
     }
     
-    private var scholarshipBackgroundColor: Color {
-            let randomIndex = Int.random(in: 0..<colors.count)
-            return colors[randomIndex]
+    func tileColor(for width: CGFloat) -> Color {
+        if width == 360 {
+            return Color("purpleColor")
+        } else {
+            return Color("lightBlue")
         }
+    }
 }
+
+struct SecondView: View {
+    let color: Color
+
+    var body: some View {
+        ZStack {
+            color.edgesIgnoringSafeArea(.all)
+            Text("Scholarships from KAZENERGY")
+                .font(.system(size: 30, weight: .bold))
+                .multilineTextAlignment(.center)
+                .frame(width: 200, height: 100, alignment: .center)
+        }
+    }
+}
+
+
 
 struct ScholarshipsView_Previews: PreviewProvider {
     static var previews: some View {

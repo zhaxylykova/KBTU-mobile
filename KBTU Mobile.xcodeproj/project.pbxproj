@@ -32,6 +32,8 @@
 		4267AE382A37369F0095B2FA /* School8View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4267AE372A37369F0095B2FA /* School8View.swift */; };
 		4267AE3A2A3736C20095B2FA /* School9View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4267AE392A3736C20095B2FA /* School9View.swift */; };
 		4267AE3C2A3737130095B2FA /* FacultyTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4267AE3B2A3737130095B2FA /* FacultyTabView.swift */; };
+		4267AE3E2A38796B0095B2FA /* FAQDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4267AE3D2A38796B0095B2FA /* FAQDataModel.swift */; };
+		4267AE402A3879BB0095B2FA /* FAQViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4267AE3F2A3879BB0095B2FA /* FAQViewModel.swift */; };
 		AC01676429E85C5B008C5ED6 /* QAView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC01676229E85C5B008C5ED6 /* QAView.swift */; };
 		AC01676529E85C5B008C5ED6 /* FAQView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC01676329E85C5B008C5ED6 /* FAQView.swift */; };
 		AC01676929E85C95008C5ED6 /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC01676729E85C95008C5ED6 /* InfoView.swift */; };
@@ -160,6 +162,8 @@
 		4267AE372A37369F0095B2FA /* School8View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = School8View.swift; sourceTree = "<group>"; };
 		4267AE392A3736C20095B2FA /* School9View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = School9View.swift; sourceTree = "<group>"; };
 		4267AE3B2A3737130095B2FA /* FacultyTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacultyTabView.swift; sourceTree = "<group>"; };
+		4267AE3D2A38796B0095B2FA /* FAQDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAQDataModel.swift; sourceTree = "<group>"; };
+		4267AE3F2A3879BB0095B2FA /* FAQViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAQViewModel.swift; sourceTree = "<group>"; };
 		564F68169C9E60A3F3BEA882 /* Pods-KBTU Mobile.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KBTU Mobile.release.xcconfig"; path = "Target Support Files/Pods-KBTU Mobile/Pods-KBTU Mobile.release.xcconfig"; sourceTree = "<group>"; };
 		8F34E528D88040C11080CF08 /* Pods_KBTU_Mobile.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KBTU_Mobile.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC01676229E85C5B008C5ED6 /* QAView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QAView.swift; sourceTree = "<group>"; };
@@ -323,6 +327,7 @@
 			children = (
 				AC01676229E85C5B008C5ED6 /* QAView.swift */,
 				AC01676329E85C5B008C5ED6 /* FAQView.swift */,
+				4267AE3F2A3879BB0095B2FA /* FAQViewModel.swift */,
 			);
 			path = FAQ;
 			sourceTree = "<group>";
@@ -848,6 +853,7 @@
 				4232C41B29F5AD750004BBED /* KbtuFacesDataModel.swift */,
 				AC14614529F9173A0051EA05 /* CarouselItemDataModel.swift */,
 				4267AE242A3733CE0095B2FA /* FacultyDataModel.swift */,
+				4267AE3D2A38796B0095B2FA /* FAQDataModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -1086,6 +1092,7 @@
 				ACB1E9D729E9854D004EA30B /* FirebaseStorageService.swift in Sources */,
 				4267AE342A3736480095B2FA /* School6View.swift in Sources */,
 				4267AE362A3736740095B2FA /* School7View.swift in Sources */,
+				4267AE402A3879BB0095B2FA /* FAQViewModel.swift in Sources */,
 				AC42ADB829B454BA0024D6EA /* StringExtension.swift in Sources */,
 				AC14614429F8F6EF0051EA05 /* MobilityViewModel.swift in Sources */,
 				AC50830B29F5117F00C49295 /* GpaCalculatorView.swift in Sources */,
@@ -1094,6 +1101,7 @@
 				4267AE2C2A3735AE0095B2FA /* School2View.swift in Sources */,
 				AC24DC2129AB844000D7BCF8 /* HomeViewProtocols.swift in Sources */,
 				AC24DBF929AB812500D7BCF8 /* TabBarViewController.swift in Sources */,
+				4267AE3E2A38796B0095B2FA /* FAQDataModel.swift in Sources */,
 				ACAAE92F29E6A4F500C5308E /* MobilityView.swift in Sources */,
 				AC01677529E85F22008C5ED6 /* PsyConsultationView.swift in Sources */,
 				AC01676529E85C5B008C5ED6 /* FAQView.swift in Sources */,
